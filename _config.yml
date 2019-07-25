@@ -4,7 +4,7 @@
 title: Varun Gohil
 
 # Short description of your site
-description: A virtual proof that I'm awesome
+# description: A virtual proof that I'm awesome
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -67,7 +67,7 @@ author:
 # You can reorder the items to define the link order.
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
-  rss: false
+#   rss: false
   email: "gohil.varun@iitgn.ac.in"
 #   facebook: deanattali
   github: varungohil
