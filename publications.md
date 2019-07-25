@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Publications
+use-site-title: true
 ---
 
 
