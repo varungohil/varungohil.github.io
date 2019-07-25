@@ -5,5 +5,6 @@ title: Publications
 
 
 -  **FAB: Framework for Analyzing Benchmarks**<br/>
-_Varun Gohil_, Shreyas Singh, Manu Awasthi<br>
-International Conference on Conference on Performance Engineering (ICPE), Work in Progress Track, Mumbai, April 2019
+<u>Varun Gohil</u>, Shreyas Singh, Manu Awasthi<br>
+International Conference on Conference on Performance Engineering (ICPE)<br>
+Work in Progress Track, Mumbai, April 2019
