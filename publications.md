@@ -8,9 +8,11 @@ title: Publications
 <u>Varun Gohil</u>, Shreyas Singh, Manu Awasthi<br>
 International Conference on Conference on Performance Engineering (ICPE)<br>
 Work in Progress Track, Mumbai, April 2019
+<a href = "docs/pubs/FAB.pdf"><img src="img/pdf.png" alt="PDF"></a>
+
 
 - **META: Memory Exploration Tool for Android Devices**<br/>
 Nisarg Parikh, <u>Varun Gohil</u>, Manu Awasthi<br>
 International Conference on Mobile Computing and Networking (MobiCom)<br>
 Poster Track, New Delhi, October 2018
-
+<a href = "docs/pubs/META.pdf"><img src="img/pdf.png" alt="PDF"></a>
