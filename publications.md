@@ -9,7 +9,7 @@ use-site-title: true
 <u>Varun Gohil</u>, Shreyas Singh, Manu Awasthi<br>
 International Conference on Conference on Performance Engineering (ICPE)<br>
 Work in Progress Track, Mumbai, April 2019<br>
-<a href = "/docs/pubs/FAB.pdf"><img src="/img/pdf.png" alt="PDF"> Paper </a> &nbsp <a href = "https://docs.google.com/presentation/d/1MRF-nWmLZdRNdf9znrB1YtPB0ObJJamq3AjXeTDuP4g/edit?usp=sharing"><img src="/img/ppt.png" alt="PPT">Slides</a>
+<a href = "/docs/pubs/FAB.pdf"><img src="/img/pdf.png" alt="PDF"> Paper </a><a href = "https://docs.google.com/presentation/d/1MRF-nWmLZdRNdf9znrB1YtPB0ObJJamq3AjXeTDuP4g/edit?usp=sharing"><img src="/img/ppt.png" alt="PPT">Slides</a>
 
 
 - **META: Memory Exploration Tool for Android Devices**<br/>
