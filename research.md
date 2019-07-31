@@ -14,7 +14,11 @@ simulation modules to carry out design space exploration
 for a wide variety of apps and memory technologies.
 
 - **Characterization of Contemporary Benchmarks**<br>
-**Advisor**: Prof. Manu Awasthi
+Computer architects studying optimizations of specific microarchitectural components, require evaluation of their
+proposals on workloads that stress the component being optimized across multiple benchmark suites for grater coverage.
+In this project, we characterize the four contemporary benchmarks - SPEC CPU 2017, PARSEC 3, SPLASH3 and OpenBLAS. We present the design and implementation of FAB - a framework built with Pin and Python based workflow which allows user-driven analysis of benchmarks across multiple axes like instruction distributions, types of instructions, memory accesses etc. through an
+interactive Python interface to check for desired characteristics,
+across multiple benchmark suites. 
 
 - **Architectural Considerations for Posit Arithmetic**<br>
 **Advisors**: Dr. Farhad Merchant and Prof. Manu Awasthi
