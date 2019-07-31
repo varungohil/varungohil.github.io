@@ -6,13 +6,13 @@ use-site-title: true
 
 - [_**Memory Exploration Tool for Handheld Devices**_](/proj_pages/meta.md)<br>
 **Advisor**: [_Prof. Manu Awasthi_](https://www.cs.utah.edu/~manua/)<br>
-Few tools exist to carry out architectural design space exploration of
+_Few tools exist to carry out architectural design space exploration of
 main memory hierarchies featuring emerging non-volatile memory technologies for newer Android and app versions. In this project I developed META, a
 trace based tool for facilitating the exploration of memory hierarchies in mobile devices. META uses an enhanced version
 of Android emulator for generating raw instruction traces.
 These traces are then fed into a cache hierarchy and memory
 simulation modules to carry out design space exploration
-for a wide variety of apps and memory technologies.
+for a wide variety of apps and memory technologies._
 
 - **Characterization of Contemporary Benchmarks**<br>
 **Advisor**: [_Prof. Manu Awasthi_](https://www.cs.utah.edu/~manua/)<br>
