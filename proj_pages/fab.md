@@ -40,7 +40,7 @@ multiple workloads, potentially from multiple benchmark suites. Finally, there a
 can specify the requirements of a workload that she is interested
 in. FAB aims to facilitate the process of workload selection and creation. The block level diagram of FAB is shown below:
 
-![Block Level Model of FAB](/img/proj/fab/fab_block_model.png)
+![Block Level Model of FAB](/img/proj/fab/fab_block_model.png | width=200)
 
 FAB’s workflow currently consists of two
 parts. The first part, or the backend, deals with a Pin based flow,
