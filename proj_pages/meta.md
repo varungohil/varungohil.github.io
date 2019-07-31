@@ -39,21 +39,20 @@ These traces are then fed into a cache hierarchy and memory
 simulation modules to carry out design space exploration
 for a wide variety of apps and memory technologies.
 
-META is built on top of Android Emulator, shipped with
+META is trace based tool built on top of Android Emulator, shipped with
 the Android Open Source Project (AOSP). This emulator, is
-built using a modified version of the QEMU virtualizer and
-emulator [3]. QEMU and AOSP were chosen because this
+built using a modified version of the QEMU emulator. QEMU and AOSP were chosen because this
 combination serves the intent of designing this tool - quick
 compatibility with future versions of Android. The emulator
 works on Android Virtual Device (AVD), which describes
 the hardware profile, system image, storage areas etc. of
 the device being simulated. For future compatibility, newer
 AVDs will have to be provided, which are typically shipped
-with AOSP, making the integration much smoother.
+with Android Studio, making the integration much smoother.
 We have modified the QEMU code shipped with AOSP
 to generate instruction level traces of the complete system,
 including the app being executed. These traces are then post
-processed via a cache and memory hierarchy simulator for
+processed via a cache module and the NVMain main memory simulator for
 understanding the application’s memory behavior, as well as
 exploring the range of memory architectures using DRAM
 and NVMs. 
