@@ -5,7 +5,6 @@ use-site-title: true
 ---
 
 - **Memory Exploration Tool for Handheld Devices**<br>
-**Advisor**: Prof. Manu Awasthi
 Handheld devices are becoming increasingly common in
 today’s world. With every passing year, the diversity of applications (apps) being supported by mobile platforms is
 growing manyfold. In addition, Android, the most popular
