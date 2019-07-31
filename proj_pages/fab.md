@@ -7,7 +7,7 @@ use-site-title: true
 
 Performance evaluation is an integral part of computer architecture
 research, and is typically carried out with the help of benchmark
-suites. These benchmark suites consist of a number of workloads which are generally representative of a particular application domain. . Computer architecture research hinges on the ability of architects to select the right
+suites. These benchmark suites consist of a number of workloads which are generally representative of a particular application domain. Computer architecture research hinges on the ability of architects to select the right
 set of workloads required to demonstrate the benefits of proposed
 enhancements to existing architectures.
 Selecting the right set of workloads for performance evaluation
@@ -38,4 +38,6 @@ workload characteristics across multiple suites in one place. Furthermore, there
 synthetic workload(s) by putting together interesting phases of
 multiple workloads, potentially from multiple benchmark suites. Finally, there are very few, well-defined axes using which an architect
 can specify the requirements of a workload that she is interested
-in.
+in. FAB aims to facilitate the process of workload selection and creation. The block level diagram of FAB is shown below:
+
+![Block Level Model of FAB](/img/fab_block_model.png)
