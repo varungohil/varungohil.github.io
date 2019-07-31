@@ -1,7 +1,7 @@
 ---
 layout: page
 title: META
-subtitle: Memory Exploration Tool for Handheld Devices
+subtitle: Memory Exploration Tool for Android devices
 use-site-title: true
 ---
 
@@ -29,7 +29,7 @@ contemporary or future ones.
 - Full system simulators are very slow compared to
 native execution
 
-We present META - Memory Exploration Tool for Android devices, which focuses on quick and comprehensive exploration of memory heirarchies in handheld devices. The design of META can be seen in figure below.
+We present META - Memory Exploration Tool for Android devices, which focuses on quick and comprehensive exploration of memory heirarchies in handheld devices. META is compatible with all Android OS versions and can also simulate emerging non-volatile memory technologies. The design of META can be seen in figure below.
 
 ![META Block Diagram](/img/proj/meta/meta_block_model.png)
 
@@ -39,5 +39,23 @@ These traces are then fed into a cache hierarchy and memory
 simulation modules to carry out design space exploration
 for a wide variety of apps and memory technologies.
 
+META is built on top of Android Emulator, shipped with
+the Android Open Source Project (AOSP). This emulator, is
+built using a modified version of the QEMU virtualizer and
+emulator [3]. QEMU and AOSP were chosen because this
+combination serves the intent of designing this tool - quick
+compatibility with future versions of Android. The emulator
+works on Android Virtual Device (AVD), which describes
+the hardware profile, system image, storage areas etc. of
+the device being simulated. For future compatibility, newer
+AVDs will have to be provided, which are typically shipped
+with AOSP, making the integration much smoother.
+We have modified the QEMU code shipped with AOSP
+to generate instruction level traces of the complete system,
+including the app being executed. These traces are then post
+processed via a cache and memory hierarchy simulator for
+understanding the application’s memory behavior, as well as
+exploring the range of memory architectures using DRAM
+and NVMs. 
 
 [![Video](http://img.youtube.com/vi/hIOYD5gAUdk/0.jpg)](http://www.youtube.com/watch?v=hIOYD5gAUdk)
