@@ -56,3 +56,6 @@ Prof. Manu recently gave a talk involving META at the SDC SNIA India conference.
 
 The initial prototype for the tool for presented at MobiCom'18. <br>
 You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.bib">Bibtex</a>
+
+META is currently being used at Prof. Manu's lab to perform analysis. More functionalities are also being added to META to support more in-depth analyses. If you want to contribute towards development of META feel free to contact me!  
+Feel free to contact me if you want to contribute to META
