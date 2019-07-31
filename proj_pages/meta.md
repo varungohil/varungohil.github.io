@@ -1,7 +1,7 @@
 ---
 layout: page
 title: META
-sub-title: Memory Exploration Tool for Handheld Devices
+subtitle: Memory Exploration Tool for Handheld Devices
 use-site-title: true
 ---
 
@@ -29,15 +29,15 @@ contemporary or future ones.
 - Full system simulators are very slow compared to
 native execution
 
-We present META - Memory Exploration Tool for Android devices, which focuses on quick and comprehensive exploration of memory heirarchies in handheld devices.
+We present META - Memory Exploration Tool for Android devices, which focuses on quick and comprehensive exploration of memory heirarchies in handheld devices. The design of META can be seen in figure below.
+
+![META Block Diagram](/img/proj/meta/meta_block_model.png)
 
 trace based tool for facilitating the exploration of memory hierarchies in mobile devices. META uses an enhanced version
 of Android emulator for generating raw instruction traces.
 These traces are then fed into a cache hierarchy and memory
 simulation modules to carry out design space exploration
 for a wide variety of apps and memory technologies.
-
-![META Block Diagram](/img/proj/meta/meta_block_model.png)
 
 
 [![Video](http://img.youtube.com/vi/hIOYD5gAUdk/0.jpg)](http://www.youtube.com/watch?v=hIOYD5gAUdk)
