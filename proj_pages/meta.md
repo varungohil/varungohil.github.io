@@ -1,6 +1,7 @@
 ---
 layout: page
 title: META
+sub-title: Memory Exploration Tool for Handheld Devices
 use-site-title: true
 ---
 
