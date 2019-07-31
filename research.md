@@ -5,23 +5,21 @@ use-site-title: true
 ---
 
 - **Memory Exploration Tool for Handheld Devices**<br>
-Handheld devices are becoming increasingly common in
-today’s world. With every passing year, the diversity of applications (apps) being supported by mobile platforms is
-growing manyfold. In addition, Android, the most popular
+With every passing year, the popoularity of handheld devices is increasing. The diversity of applications (apps) being supported by mobile platforms is growing manyfold. In addition, Android, the most popular
 handheld OS in the market is releasing a new version every
 year, with a newer and richer set of APIs, enabling the next
 generation of feature-rich applications.
-To support these apps, hardware requirements of these devices are increasing rapidly. Mobile SoCs need a larger number of faster cores, better GPUs and above all, higher DRAM
+To support these apps, mobile SoCs. Mobile SoCs need higher DRAM
 capacities to do justice to user experience. To augment capacity requirements, non-volatile memories (NVMs) have been
 proposed as a potential addition to LPDDR variants, which
 have been the mainstay of mobile SoCs. However, few tools
 exist to carry out architectural design space exploration of
-main memory hierarchies featuring NVMs for newer Android and app versions. In this paper, we present META, a
+main memory hierarchies featuring NVMs for newer Android and app versions. In this project I developed META, a
 trace based tool for facilitating the exploration of memory hierarchies in mobile devices. META uses an enhanced version
 of Android emulator for generating raw instruction traces.
 These traces are then fed into a cache hierarchy and memory
 simulation modules to carry out design space exploration
-for a wide variety of apps and memory technologies
+for a wide variety of apps and memory technologies.
 
 - **Characterization of Contemporary Benchmarks**<br>
 **Advisor**: Prof. Manu Awasthi
