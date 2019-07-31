@@ -21,7 +21,7 @@ interactive Python interface to check for desired characteristics,
 across multiple benchmark suites. 
 
 - **Architectural Considerations for Posit Arithmetic**<br>
-**Advisor**: _Prof. Manu Awasthi_<br>
+**Advisor**: _Dr. Farhad Merchant and Prof. Manu Awasthi_<br>
 Posit arithmetic is proposed as an alternative to IEEE 754 floating point arithmetic due to its greater accuracy, speed and simpler hardware design. 
 We carry out the first of its kind analysis trying to figure out the  performance and energy benefits of deploying posit arithmetic via 
 characterization of contemporary workloads. We combine ASIC 
