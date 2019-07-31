@@ -19,7 +19,7 @@ interactive Python interface to check for desired characteristics,
 across multiple benchmark suites. 
 
 - **Architectural Considerations for Posit Arithmetic**<br>
-Posit arithmetic is proposed as an alternative to IEEE 754-2008 technical standard compliant floating point arithmetic. The major advantages in posit arithmetic are greater accuracy, speed and simpler hardware design. In this paper, we 
+Posit arithmetic is proposed as an alternative to IEEE 754-2008 technical standard compliant floating point arithmetic. The major advantages in posit arithmetic are greater accuracy, speed and simpler hardware design. We 
 carry out the first of its kind analysis trying to figure out the  performance and energy benefits of deploying posit arithmetic via 
 characterization of contemporary workloads. We combine ASIC 
 synthesis results for Posit-arithmetic compliant circuits with metrics derived from workload characterization
