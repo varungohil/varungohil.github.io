@@ -51,3 +51,6 @@ mix is then used for various kinds of analyses using the tool’s frontend, whic
 pre-classified instruction bins, which can be referenced directly
 from within the notebook. The notebook takes the benchmark and
 instruction bins as input and produces stacked barcharts and dendrograms which assist in analysis.
+
+![Instruction Mix](/img/proj/fab/insn_mix.jpg)
+![Workload Similarity](/img/proj/fab/workload_similarity.jpg)
