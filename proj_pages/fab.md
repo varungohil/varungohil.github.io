@@ -57,3 +57,6 @@ instruction bins as input and produces stacked barcharts and dendrograms which a
 FAB was accepted as a work-in-progress paper at [ICPE 2019](https://icpe2019.spec.org/).<br>
 You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.bib">Bibtex</a>
 
+**Team Members**
+- [Shreyas Singh](https://github.com/42shreyas)
+- [Manu Awasthi](https://www.cs.utah.edu/~manua/)
