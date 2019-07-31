@@ -14,7 +14,7 @@ simulation modules to carry out design space exploration
 for a wide variety of apps and memory technologies.
 
 - **Characterization of Contemporary Benchmarks**<br>
-In this project, we characterize the four contemporary benchmarks - SPEC CPU 2017, PARSEC 3, SPLASH 3 and OpenBLAS using Intel Pin. We present the design and implementation of FAB - a framework built with Pin and Python based workflow which allows user-driven analysis of benchmarks across multiple axes like instruction distributions, types of instructions, memory accesses etc. through an
+In this project, we characterize four contemporary benchmarks - SPEC CPU 2017, PARSEC 3, SPLASH 3 and OpenBLAS using Intel Pin. We present the design and implementation of FAB - a framework built with Pin and Python based workflow which allows user-driven analysis of benchmarks across multiple axes like instruction distributions, types of instructions, memory accesses etc. through an
 interactive Python interface to check for desired characteristics,
 across multiple benchmark suites. 
 
