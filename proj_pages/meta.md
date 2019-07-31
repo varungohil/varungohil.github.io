@@ -9,13 +9,14 @@ today’s world. With every passing year, the diversity of applications (apps) b
 growing manyfold. In addition, Android, the most popular
 handheld OS in the market is releasing a new version every
 year, with a newer and richer set of APIs, enabling the next
-generation of feature-rich applications.
+generation of feature-rich applications.<br>
+
 To support these apps, hardware requirements of these devices are increasing rapidly. Mobile SoCs need a larger number of faster cores, better GPUs and above all, higher DRAM
 capacities to do justice to user experience. To augment capacity requirements, non-volatile memories (NVMs) have been
 proposed as a potential addition to LPDDR variants, which
 have been the mainstay of mobile SoCs. However, few tools
 exist to carry out architectural design space exploration of
-main memory hierarchies featuring NVMs for newer Android and app versions. In this paper, we present META, a
+main memory hierarchies featuring NVMs for newer Android and app versions. We present META, a
 trace based tool for facilitating the exploration of memory hierarchies in mobile devices. META uses an enhanced version
 of Android emulator for generating raw instruction traces.
 These traces are then fed into a cache hierarchy and memory
