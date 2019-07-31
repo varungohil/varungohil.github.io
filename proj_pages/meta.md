@@ -18,10 +18,10 @@ the numerous challenges being faced for architecting these,
 there is a significant lack of research in this domain. A recent report compared the number of papers published
 in leading conferences that have focused on exploration of
 mobile systems, and found the number to be significantly
-lacking, as compared to server architecture papers. We belive this is due to lack of diverse, easy-to-use and well maintained tools.
+lacking, as compared to server architecture papers. We belive this is due to lack of diverse, easy-to-use and well maintained simulation tools.
 The current state of the art simulation tools in the handheld
 SoC space rely on full system simulators which suffer from
-multiple drawbacks. The primary ones being as follows:
+multiple drawbacks, the primary ones being:
 - Existing tools can simulate relatively older versions of Android.Using older OS versions results in experimentation
 with older versions of apps, which means that the design
 space is being explored for older applications, and not the
@@ -29,7 +29,8 @@ contemporary or future ones.
 - Full system simulators are very slow compared to
 native execution
 
-We present META, a
+We present META - Memory Exploration Tool for Android devices, which focuses on quick and comprehensive exploration of memory heirarchies in handheld devices.
+
 trace based tool for facilitating the exploration of memory hierarchies in mobile devices. META uses an enhanced version
 of Android emulator for generating raw instruction traces.
 These traces are then fed into a cache hierarchy and memory
