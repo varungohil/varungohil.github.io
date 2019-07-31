@@ -51,5 +51,8 @@ understanding the application’s memory behavior, as well as
 exploring the range of memory architectures using DRAM
 and NVMs. 
 
-Prof. Manu recently gave a talk involving META at SNIA India conference.  
-[![Video](http://img.youtube.com/vi/hIOYD5gAUdk/0.jpg)](http://www.youtube.com/watch?v=hIOYD5gAUdk)
+Prof. Manu recently gave a talk involving META at SNIA India conference. 
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=hIOYD5gAUdk">
+</iframe>
+
