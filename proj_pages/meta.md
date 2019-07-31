@@ -54,7 +54,7 @@ and NVMs.
 Prof. Manu recently gave a talk involving META at the [SDC SNIA India conference](https://www.snia.org/events/sdcindia/agenda2019). 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hIOYD5gAUdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-The initial prototype for the tool for presented at MobiCom'18. <br>
+The initial prototype of META for presented at [MobiCom 2018](https://sigmobile.org/mobicom/2018/). <br>
 You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.bib">Bibtex</a>
 
 META is currently being used at Prof. Manu's lab to perform analysis. More functionalities are also being added to META to support more in-depth analyses. If you want to contribute towards development of META feel free to contact me!  
