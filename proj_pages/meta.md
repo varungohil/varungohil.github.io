@@ -23,3 +23,6 @@ simulation modules to carry out design space exploration
 for a wide variety of apps and memory technologies.
 
 ![META Block Diagram](/img/proj/meta/meta_block_model.png)
+
+
+[![Video](http://img.youtube.com/vi/hIOYD5gAUdk/0.jpg)](http://www.youtube.com/watch?v=v=hIOYD5gAUdk)
