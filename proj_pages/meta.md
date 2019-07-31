@@ -33,12 +33,6 @@ We present META - Memory Exploration Tool for Android devices, which focuses on 
 
 ![META Block Diagram](/img/proj/meta/meta_block_model.png)
 
-trace based tool for facilitating the exploration of memory hierarchies in mobile devices. META uses an enhanced version
-of Android emulator for generating raw instruction traces.
-These traces are then fed into a cache hierarchy and memory
-simulation modules to carry out design space exploration
-for a wide variety of apps and memory technologies.
-
 META is trace based tool built on top of Android Emulator, shipped with
 the Android Open Source Project (AOSP). This emulator, is
 built using a modified version of the QEMU emulator. QEMU and AOSP were chosen because this
@@ -57,4 +51,5 @@ understanding the application’s memory behavior, as well as
 exploring the range of memory architectures using DRAM
 and NVMs. 
 
+Prof. Manu recently gave a talk involving META at SNIA India conference.  
 [![Video](http://img.youtube.com/vi/hIOYD5gAUdk/0.jpg)](http://www.youtube.com/watch?v=hIOYD5gAUdk)
