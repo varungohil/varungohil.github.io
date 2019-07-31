@@ -21,3 +21,5 @@ of Android emulator for generating raw instruction traces.
 These traces are then fed into a cache hierarchy and memory
 simulation modules to carry out design space exploration
 for a wide variety of apps and memory technologies.
+
+![META Block Diagram](/img/proj/meta/meta_block_model.png)
