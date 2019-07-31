@@ -51,6 +51,8 @@ understanding the application’s memory behavior, as well as
 exploring the range of memory architectures using DRAM
 and NVMs. 
 
-Prof. Manu recently gave a talk involving META at SNIA India conference. 
+Prof. Manu recently gave a talk involving META at the SDC SNIA India conference. 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hIOYD5gAUdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+The initial prototype for the tool for presented at MobiCom'18. <br>
+You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.bib">Bibtex</a>
