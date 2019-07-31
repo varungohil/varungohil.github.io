@@ -4,7 +4,7 @@ title: Research Projects
 use-site-title: true
 ---
 
-- <span style="color:red">[**Memory Exploration Tool for Handheld Devices**](/proj_pages/meta.md)</span><br>
+- [_**Memory Exploration Tool for Handheld Devices**_](/proj_pages/meta.md)<br>
 **Advisor**: [_Prof. Manu Awasthi_](https://www.cs.utah.edu/~manua/)<br>
 Few tools exist to carry out architectural design space exploration of
 main memory hierarchies featuring emerging non-volatile memory technologies for newer Android and app versions. In this project I developed META, a
