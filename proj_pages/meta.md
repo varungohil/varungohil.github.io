@@ -52,7 +52,5 @@ exploring the range of memory architectures using DRAM
 and NVMs. 
 
 Prof. Manu recently gave a talk involving META at SNIA India conference. 
-<iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=hIOYD5gAUdk">
-</iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hIOYD5gAUdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
