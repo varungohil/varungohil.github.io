@@ -4,3 +4,38 @@ title: FAB
 subtitle: Framework for Analyzing Benchmarks
 use-site-title: true
 ---
+
+Performance evaluation is an integral part of computer architecture
+research, and is typically carried out with the help of benchmark
+suites. These benchmark suites consist of a number of workloads which are generally representative of a particular application domain. . Computer architecture research hinges on the ability of architects to select the right
+set of workloads required to demonstrate the benefits of proposed
+enhancements to existing architectures.
+Selecting the right set of workloads for performance evaluation
+of an architecture is not an easy task due to multiple reasons:
+ - A benchmark suite comprises of a number of workloads that are
+representative of the typical characteristics and behaviors of a class
+of applications.
+- Evaluation of the same sub-system across multiple contexts could
+lead to different benchmark suites being used.
+- A benchmark suite is an aggregation of a large number
+of disparate applications where each workload can potentially have
+multiple phases of execution. Typically, in a given phase, a
+workload stresses one or a small subset of system components.
+
+This varied space could become especially difficult to maneuver
+for architects and designers who are trying to optimize a specific
+components of the architecture, say the floating point subsystem.
+Once an enhancement has been designed, the architects would like
+to study the system level implications of the proposed optimization in terms of various metrics for performance and/or energy
+consumption. As a result, the architect would like to select the
+workloads from all possible available suites that show a significant
+amount of floating point activity.
+
+Currently, selecting a set of workloads that satisfy the criteria
+specified by an architect, is a very difficult task, mostly because
+there is no central repository which can help architects compare
+workload characteristics across multiple suites in one place. Furthermore, there are no existing mechanisms for an architect to create
+synthetic workload(s) by putting together interesting phases of
+multiple workloads, potentially from multiple benchmark suites. Finally, there are very few, well-defined axes using which an architect
+can specify the requirements of a workload that she is interested
+in.
