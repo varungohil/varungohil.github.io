@@ -28,4 +28,5 @@ units to find sweet spots in the tradeoffs between FPU die area, FPU
 energy consumption, dynamic range and precision of computation results. 
 
 - **Optimizing the Autonomous Driving System**<br>
-**Advisor**: Prof. Rajeev Balasubramonian
+**Advisor**: Prof. Rajeev Balasubramonian<br>
+Architecting autonomous drivingsystems is challenging due to strict performance requirements of making functionally correct deci-sions always by processing incoming frames with low latency to ensure safety.  Furthermore these systems  need  to  operate  with  low  power  consumption  to  prevent  reduction  in  fuel  efficiency and driving range of the vehicle. I implement an end-to-end autonomous driving system for facilitating further research in the field. I also propose modifications to the system based on my insights, which might result in significant reduction in computation and power consumption. Currently the proposed optimizations are being evaluated.
