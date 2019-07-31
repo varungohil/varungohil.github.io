@@ -41,3 +41,13 @@ can specify the requirements of a workload that she is interested
 in. FAB aims to facilitate the process of workload selection and creation. The block level diagram of FAB is shown below:
 
 ![Block Level Model of FAB](/img/proj/fab/fab_block_model.png)
+
+FAB’s workflow currently consists of two
+parts. The first part, or the backend, deals with a Pin based flow,
+which takes a workload binary and the associated input files as
+input, and generates an instruction mix for the workload as output.
+This has to be done once for every new workload. The instruction
+mix is then used for various kinds of analyses using the tool’s frontend, which is a Jupyter notebook. The frontend also contains the
+pre-classified instruction bins, which can be referenced directly
+from within the notebook. The notebook takes the benchmark and
+instruction bins as input and produces stacked barcharts and dendrograms which assist in analysis.
