@@ -40,7 +40,7 @@ multiple workloads, potentially from multiple benchmark suites. Finally, there a
 can specify the requirements of a workload that she is interested
 in. FAB aims to facilitate the process of workload selection and creation. The block level diagram of FAB is shown below:
 
-![Block Level Model of FAB](/img/proj/fab/fab_block_model.png | width=200)
+![Block Level Model of FAB](/img/proj/fab/fab_block_model.png)
 
 FAB’s workflow currently consists of two
 parts. The first part, or the backend, deals with a Pin based flow,
@@ -54,4 +54,6 @@ instruction bins as input and produces stacked barcharts and dendrograms which a
 
 ![Instruction Mix](/img/proj/fab/insn_mix.jpg "Instruction Mix") | ![Workload Similarity](/img/proj/fab/workload_similarity.jpg "Workload Similarity")
 
-FAB was accepted as a work-in-progress paper at [ICPE 2019](https://icpe2019.spec.org/). 
+FAB was accepted as a work-in-progress paper at [ICPE 2019](https://icpe2019.spec.org/).
+You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.bib">Bibtex</a>
+
