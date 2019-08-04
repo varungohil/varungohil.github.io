@@ -12,3 +12,11 @@ I really like [Prof. Kozyrakis'](https://web.stanford.edu/~kozyraki/index.html) 
 - [The Next Platform](https://www.nextplatform.com/)
 - [Anand Tech](https://www.anandtech.com/)
 - [Hacker News](https://news.ycombinator.com/)
+
+
+<br>
+
+#### Comic websites
+- [Zen Pencils](https://zenpencils.com/)
+- [XKCD](https://xkcd.com/)
+- [PhD Comics](http://phdcomics.com/)
