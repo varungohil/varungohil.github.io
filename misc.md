@@ -5,7 +5,6 @@ I really like [Prof. Kozyrakis'](https://web.stanford.edu/~kozyraki/index.html) 
 
 
 <br>
-<br>
 
 #### Websites to stay updated
 - [The Morning Paper](https://blog.acolyer.org/)
