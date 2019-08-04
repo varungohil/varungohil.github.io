@@ -3,7 +3,6 @@ I really like [Prof. Kozyrakis'](https://web.stanford.edu/~kozyraki/index.html) 
 > Computer theorists invent algorithms that solve important problems and analyze their asymptotic behavior (e.g. O(NlogN) or O(N3)). Computer architects set the constant factors for these algorithms…
 > -- Prof. Christos Kozyrakis, Stanford
 
-
 <br>
 
 #### Websites to stay updated
@@ -12,7 +11,6 @@ I really like [Prof. Kozyrakis'](https://web.stanford.edu/~kozyraki/index.html) 
 - [The Next Platform](https://www.nextplatform.com/)
 - [Anand Tech](https://www.anandtech.com/)
 - [Hacker News](https://news.ycombinator.com/)
-
 
 <br>
 
