@@ -59,6 +59,10 @@ You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a 
 
 META is currently being used at Prof. Manu's lab to perform analysis. More functionalities are also being added to META to support more in-depth analyses. If you want to contribute towards development of META feel free to contact me!  
 
-**Team Members**
-- [Nisarg Parikh](https://www.linkedin.com/in/nisargnparikh)
+**Current Team Members**
+- [Nisarg Ujjainkar](https://github.com/nisarg-ujjainkar)
+- [Deepraj Pandey](https://github.com/DeeprajPandey)
 - [Manu Awasthi](https://www.cs.utah.edu/~manua/)
+
+**Past Team Members**
+- [Nisarg Parikh](https://www.linkedin.com/in/nisargnparikh)
