@@ -10,7 +10,6 @@ I really like [Prof. Kozyrakis'](https://web.stanford.edu/~kozyraki/index.html) 
 - [Computer Architecture Today](https://www.sigarch.org/blog/)
 - [Hacker News](https://news.ycombinator.com/)
 - [The Next Platform](https://www.nextplatform.com/)
-- [Anand Tech](https://www.anandtech.com/)
 - [Explorable Explanations](https://explorabl.es/)
 - [Academo](https://academo.org/)
 
