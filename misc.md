@@ -5,12 +5,15 @@ I really like [Prof. Kozyrakis'](https://web.stanford.edu/~kozyraki/index.html) 
 
 <br>
 
-#### Websites to stay updated
+#### Websites I follow!
 - [The Morning Paper](https://blog.acolyer.org/)
 - [Computer Architecture Today](https://www.sigarch.org/blog/)
+- [Hacker News](https://news.ycombinator.com/)
 - [The Next Platform](https://www.nextplatform.com/)
 - [Anand Tech](https://www.anandtech.com/)
-- [Hacker News](https://news.ycombinator.com/)
+- [Explorable Explanations](https://explorabl.es/)
+- [Academo](https://academo.org/)
+
 
 <br>
 
