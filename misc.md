@@ -16,7 +16,8 @@ I really like [Prof. Kozyrakis'](https://web.stanford.edu/~kozyraki/index.html) 
 
 <br>
 
-#### Comic websites
+#### Cool Websites
+- [Nicky Case's Site](https://ncase.me/)
 - [Zen Pencils](https://zenpencils.com/)
 - [XKCD](https://xkcd.com/)
 - [PhD Comics](http://phdcomics.com/)
