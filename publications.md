@@ -5,8 +5,14 @@ use-site-title: true
 ---
 
 
+- **Effect of Feature Hashing on Fair Classification**<br/>
+Ritik Dutta ,<u>Varun Gohil*</u>, Atishay Jain*<br>
+Joint International Conference on Data Science & Management of Data (CODS-COMAD)<br>
+Young Researcher's Symposium, Hyderbad, January 2020<br>
+[Project Page](/proj_pages/fh_on_fc.md), <a href = "/docs/pubs/cods_comad_2020.pdf">Paper </a>
+
 -  **FAB: Framework for Analyzing Benchmarks**<br/>
-<u>Varun Gohil</u>, Shreyas Singh, Manu Awasthi<br>
+<u>Varun Gohil*</u>, Shreyas Singh*, Manu Awasthi<br>
 International Conference on Conference on Performance Engineering (ICPE)<br>
 Work in Progress Track, Mumbai, April 2019<br>
 [Project Page](/proj_pages/fab.md), <a href = "/docs/pubs/FAB.pdf">Paper </a>, <a href = "https://docs.google.com/presentation/d/1MRF-nWmLZdRNdf9znrB1YtPB0ObJJamq3AjXeTDuP4g/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/fab.bib">Bibtex</a>
