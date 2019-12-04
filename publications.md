@@ -9,7 +9,7 @@ use-site-title: true
 Ritik Dutta ,<u>Varun Gohil*</u>, Atishay Jain*<br>
 Joint International Conference on Data Science & Management of Data (CODS-COMAD)<br>
 Young Researcher's Symposium, Hyderbad, January 2020<br>
-[Project Page](/proj_pages/fh_on_fc.md), <a href = "/docs/pubs/cods_comad_2020.pdf">Paper </a>
+<!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "/docs/pubs/cods_comad_2020.pdf">Paper </a>
 
 -  **FAB: Framework for Analyzing Benchmarks**<br/>
 <u>Varun Gohil*</u>, Shreyas Singh*, Manu Awasthi<br>
