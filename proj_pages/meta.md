@@ -61,7 +61,6 @@ META is currently being used at Prof. Manu's lab to perform analysis. More funct
 
 **Current Team Members**
 - [Nisarg Ujjainkar](https://github.com/nisarg-ujjainkar)
-- [Deepraj Pandey](https://github.com/DeeprajPandey)
 - [Manu Awasthi](https://www.cs.utah.edu/~manua/)
 
 **Past Team Members**
