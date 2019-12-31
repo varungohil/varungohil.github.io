@@ -34,11 +34,9 @@ amount of floating point activity.
 Currently, selecting a set of workloads that satisfy the criteria
 specified by an architect, is a very difficult task, mostly because
 there is no central repository which can help architects compare
-workload characteristics across multiple suites in one place. Furthermore, there are no existing mechanisms for an architect to create
-synthetic workload(s) by putting together interesting phases of
-multiple workloads, potentially from multiple benchmark suites. Finally, there are very few, well-defined axes using which an architect
+workload characteristics across multiple suites in one place. Further, there are very few, well-defined axes using which an architect
 can specify the requirements of a workload that she is interested
-in. FAB aims to facilitate the process of workload selection and creation. The block level diagram of FAB is shown below:
+in. FAB aims to facilitate the process of workload selection. The block level diagram of FAB is shown below:
 
 ![Block Level Model of FAB](/img/proj/fab/fab_block_model.png)
 
@@ -55,7 +53,8 @@ instruction bins as input and produces stacked barcharts and dendrograms which a
 ![Instruction Mix](/img/proj/fab/insn_mix.jpg "Instruction Mix") | ![Workload Similarity](/img/proj/fab/workload_similarity.jpg "Workload Similarity")
 
 FAB was accepted as a work-in-progress paper at [ICPE 2019](https://icpe2019.spec.org/).<br>
-You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.bib">Bibtex</a>
+You can find the resources here  <a href = "/docs/pubs/FAB.pdf">Paper </a>, <a href = "https://docs.google.com/presentation/d/1MRF-nWmLZdRNdf9znrB1YtPB0ObJJamq3AjXeTDuP4g/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/fab.bib">Bibtex</a>
+
 
 **Team Members**
 - [Shreyas Singh](https://github.com/42shreyas)
