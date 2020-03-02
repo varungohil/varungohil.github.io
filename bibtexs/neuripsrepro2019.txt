@@ -1,0 +1,6 @@
+@article{gohil2019one,
+  title={[Re] One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers},
+  author={Gohil, Varun and Narayanan, S Deepak and Jain, Atishay},
+  journal={ReScience-C}
+  year={2020}
+}
