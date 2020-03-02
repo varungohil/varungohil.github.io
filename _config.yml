@@ -4,7 +4,7 @@
 title: Varun Gohil
 
 # Short description of your site
-description: My virtual wall
+description: 
 #A virtual proof that I'm awesome
 
 # --- Local development options ---
@@ -21,7 +21,7 @@ description: My virtual wall
 
 # List of links in the navigation bar
 navbar-links:
-  Research: "research"
+#   Research: "research"
   Publications: "publications"
   CV: "/docs/Grad_CV.pdf"
   Misc: "misc"
