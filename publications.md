@@ -11,7 +11,7 @@ NeurIPS Reproducibility Challenge, ReScience C<br>
 <!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "/docs/pubs/Camera_Ready_NeurIPS_Repro_Challenge_Report.pdf">Paper</a>, <a href = "https://github.com/varungohil/Generalizing-Lottery-Tickets"> Code</a>,<a href = "/bibtexs/neuripsrepro2019.txt"> Bibtex</a>
 
 - **Effect of Feature Hashing on Fair Classification**<br>
-Ritik Dutta*, <u>Varun Gohil*</u>, Atishay Jain*<br>
+Ritik Dutta<pre>*</pre>, <u>Varun Gohil*</u>, Atishay Jain*<br>
 International Conference on Data Science & Management of Data (CODS-COMAD)<br>
 Young Researcher's Symposium, Hyderbad, January 2020<br>
 <!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "/docs/pubs/cods_comad_2020.pdf">Paper</a>,<a href = "/bibtexs/featurehashingforfairclassification.txt"> Bibtex</a>
