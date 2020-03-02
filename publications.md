@@ -20,7 +20,7 @@ Young Researcher's Symposium, Hyderbad, January 2020<br>
 <u>Varun Gohil*</u>, Shreyas Singh*, Manu Awasthi<br>
 International Conference on Conference on Performance Engineering (ICPE)<br>
 Work in Progress Track, Mumbai, April 2019<br>
-[Project Page](/proj_pages/fab.md), <a href = "/docs/pubs/FAB.pdf">Paper </a>, <a href = "https://docs.google.com/presentation/d/1MRF-nWmLZdRNdf9znrB1YtPB0ObJJamq3AjXeTDuP4g/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/fab.bib">Bibtex</a>
+[Project Page](/proj_pages/fab.md), <a href = "/docs/pubs/FAB.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1MRF-nWmLZdRNdf9znrB1YtPB0ObJJamq3AjXeTDuP4g/edit?usp=sharing"> Slides</a>,<a href = "/bibtexs/fab.bib"> Bibtex</a>
 
 
 - **META: Memory Exploration Tool for Android Devices**<br/>
