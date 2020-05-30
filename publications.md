@@ -4,6 +4,12 @@ title: Publications
 use-site-title: true
 ---
 
+- **Prefetching in Hybrid Main Memory Systems**<br>
+Subisha V, <u>Varun Gohil</u>, Nisarg Ujjainkar, Manu Awasthi <br>
+12th USENIX Workshop on Hot Topics in Storage and File Systems<br>
+<!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "/docs/pubs/hotstorage2020.pdf">Paper</a>
+
+
 
 - **[Re] One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers**<br>
 <u>Varun Gohil*</u>, S. Deepak Narayanan\*, Atishay Jain* <br>
