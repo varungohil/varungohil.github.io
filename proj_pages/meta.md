@@ -15,7 +15,7 @@ capacities to do justice to user experience.<br>
 
 Despite the growing importance of these devices, and
 the numerous challenges being faced for architecting these,
-there is a significant lack of research in this domain. A recent report compared the number of papers published
+there is a significant lack of research in this domain. A <a href="https://research.google/pubs/pub46755/">recent report</a> compared the number of papers published
 in leading conferences that have focused on exploration of
 mobile systems, and found the number to be significantly
 lacking, as compared to server architecture papers. We belive this is due to lack of diverse, easy-to-use and well maintained simulation tools.
@@ -57,11 +57,9 @@ Prof. Manu recently gave a talk involving META at the [SDC SNIA India conference
 The initial prototype of META for presented at [MobiCom 2018](https://sigmobile.org/mobicom/2018/). <br>
 You can find the resources here : <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.bib">Bibtex</a>
 
-META is currently being used at Prof. Manu's lab to perform analysis. More functionalities are also being added to META to support more in-depth analyses. If you want to contribute towards development of META feel free to contact me!  
+META is currently being used at Prof. Manu's lab to perform analysis.
 
-**Current Team Members**
+**Collaborators**
 - [Nisarg Ujjainkar](https://github.com/nisarg-ujjainkar)
-- [Manu Awasthi](https://www.cs.utah.edu/~manua/)
-
-**Past Team Members**
 - [Nisarg Parikh](https://www.linkedin.com/in/nisargnparikh)
+- [Manu Awasthi](https://www.cs.utah.edu/~manua/)
