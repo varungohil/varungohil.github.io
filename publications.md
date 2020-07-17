@@ -16,7 +16,7 @@ Subisha V, <u>Varun Gohil</u>, Nisarg Ujjainkar, Manu Awasthi <br>
 - **[Re] One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers**<br>
 <u>Varun Gohil*</u>, S. Deepak Narayanan\*, Atishay Jain* <br>
 NeurIPS Reproducibility Challenge 2019, ReScience C<br>
-<!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "/docs/pubs/Camera_Ready_NeurIPS_Repro_Challenge_Report.pdf">Paper</a>, <a href = "https://github.com/varungohil/Generalizing-Lottery-Tickets"> Code</a>,<a href = "/bibtexs/neuripsrepro2019.txt"> Bibtex</a>
+<!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "https://rescience.github.io/bibliography/Gohil_2020.html">Paper</a>, <a href = "https://github.com/varungohil/Generalizing-Lottery-Tickets"> Code</a>,<a href = "/bibtexs/neuripsrepro2019.txt"> Bibtex</a>
 
 - **Effect of Feature Hashing on Fair Classification**<br>
 Ritik Dutta\*, <u>Varun Gohil*</u>, Atishay Jain*<br>
