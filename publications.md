@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Publications
-use-site-title: true
-avatar: 
+use-site-title: false
 ---
 
 - **Prefetching in Hybrid Main Memory Systems**<br>
