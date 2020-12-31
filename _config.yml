@@ -68,13 +68,13 @@ author:
 # If you want to add a new link that isn't here, you'll need to also edit the file _data/SocialNetworks.yml
 social-network-links:
 #   rss: false
-  email: "gohil.varun@iitgn.ac.in"
+  email: "varun.gohil@ashoka.edu.in"
 #   facebook: deanattali
   github: varungohil
   twitter: VarunGohil9
-#   scholar: "https://scholar.google.com/citations?user=v_hC2_0AAAAJ&hl=en"
+  scholar: v_hC2_0AAAAJ
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: varun-gohil
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -150,7 +150,7 @@ excerpt_length: 50
 
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
-title-separator: "-"
+title-separator: ""
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
