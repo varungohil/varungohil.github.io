@@ -35,4 +35,4 @@ Work in Progress Track, Mumbai, April 2019<br>
 Nisarg Parikh, <u>Varun Gohil</u>, Manu Awasthi<br>
 International Conference on Mobile Computing and Networking (MobiCom)<br>
 Poster Track, New Delhi, October 2018<br>
-[Project Page](/proj_pages/meta.md), <a href = "/docs/pubs/META.pdf">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.txt">Bibtex</a>
+[Project Page](/proj_pages/meta.md), <a href = " https://dl.acm.org/doi/10.1145/3241539.3267737?cid=99659314660">Paper</a>, <a href = "https://docs.google.com/presentation/d/1BJonBRxkPjMUGhd_4CiFOFjjnG64ieMqjCokuaHfrkA/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/meta.txt">Bibtex</a>
