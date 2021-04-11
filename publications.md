@@ -4,13 +4,17 @@ title: Publications
 use-site-title: false
 ---
 
+- **Fixed-Posit: A Floating-Point Representation for Error-Resilient Applications**<br>
+<u>Varun Gohil</u>\*, Sumit Walia, Joycee Mekie, Manu Awasthi <br>
+IEEE Transactions on Circuits and Systems II<br>
+<!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "https://ieeexplore.ieee.org/document/9399648">Paper</a>, <a href = "https://ieeexplore.ieee.org/document/9399648"> Bibtex</a>
+
+
+
 - **Prefetching in Hybrid Main Memory Systems**<br>
 Subisha V, <u>Varun Gohil</u>, Nisarg Ujjainkar, Manu Awasthi <br>
 12th USENIX Workshop on Hot Topics in Storage and File Systems<br>
 <!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "https://www.usenix.org/system/files/hotstorage20_paper_v.pdf">Paper</a>, <a href = "https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/hotstorage20/hotstorage20-paper86-video-long-gohil.mp4">Video</a>, <a href = "https://docs.google.com/presentation/d/1guCv0jptoJlyGZMj8muOgjSdqvYuEAo45PRe2S1i3zo/edit?usp=sharing">Slides</a>, <a href = "/bibtexs/hotstorage2020.txt"> Bibtex</a>
-
-
-
 
 
 - **[Re] One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers**<br>
