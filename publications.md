@@ -7,7 +7,7 @@ use-site-title: false
 - **Fixed-Posit: A Floating-Point Representation for Error-Resilient Applications**<br>
 <u>Varun Gohil</u>\*, Sumit Walia\*, Joycee Mekie, Manu Awasthi <br>
 IEEE Transactions on Circuits and Systems II<br>
-<!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "https://arxiv.org/pdf/2104.04763.pdf">Paper</a>, <a href = "https://ieeexplore.ieee.org/document/9399648"> Bibtex</a>
+<!-- [Project Page](/proj_pages/fh_on_fc.md), --> <a href = "https://arxiv.org/pdf/2104.04763.pdf">Paper</a>, <a href = "https://github.com/COSys-Research/Fixed-Posit">Code</a>, <a href = "https://ieeexplore.ieee.org/document/9399648"> Bibtex</a>
 
 
 
