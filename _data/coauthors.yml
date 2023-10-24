@@ -1,14 +1,38 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Walia":
+  - firstname: ["Sumit", "Sumit Walia", "S."]
+    url: https://sumit-walia.github.io/
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Dutta":
+  - firstname: ["Ritik", "R."]
+    url: https://scholar.google.com/citations?user=Fte19O0AAAAJ&hl=en
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Awasthi":
+  - firstname: ["Manu", "M.", "Manu Awasthi"]
+    url: https://manuawasthi.in/
+
+"Mekie":
+  - firstname: ["Joycee", "J."]
+    url: https://joycee.people.iitgn.ac.in/
+
+"Ujjainkar":
+  - firstname: ["Nisarg", "N."]
+    url: https://scholar.google.com/citations?user=YW0sG4AAAAAJ&hl=en
+
+"Singh": 
+  - firstname: ["Shreyas"]
+    url: https://scholar.google.com/citations?user=dFCoEWkAAAAJ&hl=en
+
+"Jain": 
+  - firstname: ["Atishay"]
+    url: https://scholar.google.com/citations?user=OxSPWZoAAAAJ&hl=en
+
+"Narayanan": 
+  - firstname: ["S Deepak"]
+    url: https://sdeepaknarayanan.github.io/
+
+"Parikh": 
+  - firstname: ["Nisarg", "N."]
+    url: https://ca.linkedin.com/in/nisargnparikh
 
 "Bach": 
   - firstname: ["Johann Sebastian", "J. S."]

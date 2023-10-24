@@ -30,9 +30,14 @@ layout: default
               cache_bust=true -%}
             {% endif -%}
             {%- if page.profile.more_info %}
-            <div class="more-info">
-              {{ page.profile.more_info }}
+            <div class="social">
+              <div class="contact-icons">
+                {% include social.html %}
+              </div>
             </div>
+            <!-- <div class="more-info">
+              {{ page.profile.more_info }}
+            </div> -->
             {%- endif %}
           </div>
           {%- endif %}
@@ -43,7 +48,7 @@ layout: default
 
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
+            <h4><a href="{{ '/news/' | relative_url }}" style="color: inherit;">News</a></h4>
             {%- include news.html limit=true %}
           {%- endif %}
 
@@ -61,10 +66,10 @@ layout: default
 
           <!-- Social -->
           {%- if page.social %}
-            <div class="social">
+            <!-- <div class="social">
               <div class="contact-icons">
                 {% include social.html %}
-              </div>
+              </div> -->
 
               <div class="contact-note">
                 {{ site.contact_note }}

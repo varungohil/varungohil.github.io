@@ -1,52 +1,42 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
-    "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
-    "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
-    },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
-    ]
+    "name": "Varun Chandrashekhar Gohil",
+    "email": "varuncgohil@gmail.com",
+    "phone": "(607) 405-9483"
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Google",
+      "position": "Research Intern",
+      "startDate": "June 2023",
+      "endDate": "August 2023",
+      "summary": "",
       "highlights": [
-        "Relativity"
       ]
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "institution": "Massachusetts Institute of Technology",
+      "url": "https://www.mit.edu",
+      "area": "Electrical Engineering and Computer Science",
+      "studyType": "Ph.D.",
+      "startDate": "2022",
+      "endDate": "-",
       "score": "",
       "courses": [
-        "Theory of Relativity"
+      ]
+    },
+    {
+      "institution": "Indian Institute of Technology Gandhinagar",
+      "url": "https://iitgn.ac.in",
+      "area": "Computer Science and Engineering",
+      "studyType": "B.Tech",
+      "startDate": "2016",
+      "endDate": "2020",
+      "score": "",
+      "courses": [
       ]
     }
   ],

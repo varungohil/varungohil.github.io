@@ -168,10 +168,11 @@ blockquote {
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;
-
+    color: $white-color;
     p {
       display: inline-block;
       margin: 0;
+      color: $white-color;
     }
   }
 }
@@ -352,11 +353,12 @@ blockquote {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    // text-align: center;
+    font-size: 2rem;
 
     a {
       i::before {
-        color: var(--global-text-color);
+        color: var(--global-theme-color);
         transition-property: all 0.2s ease-in-out;
       }
 
