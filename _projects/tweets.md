@@ -6,6 +6,11 @@ img: assets/img/quotes.png
 category: misc
 importance: 5
 ---
+<blockquote>
+The only real test of intelligence is if you get what you want out of life.
+<br>
+    - Naval Ravikant
+</blockquote>
 
 <blockquote>
 <a href="https://twitter.com/chipro/status/1210012463371960320?s=20">
