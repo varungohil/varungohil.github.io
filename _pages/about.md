@@ -19,9 +19,14 @@ social: true  # includes social icons at the bottom of the page
 
 Hi there! Welcome to my virtual estate. I am a Ph.D. student at [MIT Computer Science and Artificial Intelligence Lab (CSAIL)](https://www.csail.mit.edu/) working with [Prof. Christina Delimitrou](https://people.csail.mit.edu/delimitrou/).
 
-Currently, I spend my time thinking about how to address the issues of interpretability and generalizability of machine learning models when they are used for computer systems tasks. I'm also interested in designing datacenter servers for emerging microservice and serverless applications.
+I'm interested in desigining the next-generation datacenter servers for emerging microservice and serverless applications.
+Currently, my research tries to answer the following questions: 
+- How to decide resource capacities when provisioning servers? 
+-  What new hardware knobs to add to servers to help accommodate heterogeneity in applications and what are the best ways to tune such knobs? 
 
-Before joining MIT, I worked with [Prof. Manu Awasthi](https://manuawasthi.in/), [Prof. Joycee Mekie](https://joycee.people.iitgn.ac.in/) and [Prof. Rajeev Balasubramonian](https://users.cs.utah.edu/~rajeev/) on  approximate computing, computer arithmetic representations, neural network compression, computer architecture for smartphones, hybrid memory systems and autonomous vehicles.
+I'm also interested in addressing issues of interpretability and generalizability of machine learning models when they are used for computer systems tasks.
+
+I completed my undergraduate at [IIT Gandhinagar](https://iitgn.ac.in/). During my undergraduate days, I worked with [Prof. Manu Awasthi](https://manuawasthi.in/), [Prof. Joycee Mekie](https://joycee.people.iitgn.ac.in/) and [Prof. Rajeev Balasubramonian](https://users.cs.utah.edu/~rajeev/) on  approximate computing, computer arithmetic representations, neural network compression, computer architecture for smartphones, hybrid memory systems and autonomous vehicles.
 <!-- My research interests span the entire computing stack. I am specifically fascinated by the subject of computer architecture and firmly believe that better system design would play crucial role for progress in computer technology. -->
 
 <!-- , be it machine learning or genomics. -->
