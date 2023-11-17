@@ -54,6 +54,17 @@ totally dependent on them for my life and well being.
     - Steve Jobs
 </blockquote>
 
+
+<blockquote>
+<i>
+Successful people create companies.  More successful people create countries.  The most successful people create religions.
+</i>
+<br>
+<br>
+    - Unknown
+</blockquote>
+
+
 <blockquote>
 <i>
 There are naïve questions, tedious questions, ill-phrased questions, questions put after inadequate self-criticism. But every question is a cry to understand the world. There is no such thing as a dumb question.
