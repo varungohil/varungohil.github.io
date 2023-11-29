@@ -4,7 +4,7 @@ title: Quotes I Like
 description: From various folks
 img: assets/img/quotes.png
 category: misc
-importance: 5
+importance: 3
 ---
 <blockquote>
 <i>

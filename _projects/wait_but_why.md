@@ -5,7 +5,7 @@ description: Tim Urban
 redirect: https://waitbutwhy.com/
 img: assets/img/wbw.png
 category: misc
-importance: 1
+importance: 3
 ---
 
 Redirecting to another page.
