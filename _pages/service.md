@@ -1,11 +1,11 @@
 ---
 layout: page
-permalink: /teaching/
-title: Teaching/Mentoring
+permalink: /service/
+title: Service
 description: 
 nav: true
 nav_order: 5
-display_categories: [Teaching, Mentoring]
+display_categories: [Teaching, Mentoring, Organization]
 horizontal: false
 ---
 
