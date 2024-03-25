@@ -1,3 +1,43 @@
+"Lazarev":
+  - firstname: ["Nikita", "Nikita Lazarev", "N."]
+    url: https://www.nikita.tech/
+
+"Delimitrou":
+  - firstname: ["Christina", "Christina Delimitrou", "C."]
+    url: https://people.csail.mit.edu/delimitrou/
+
+"Ranganathan":
+  - firstname: ["Partha", "Parthasarathy", "Parthasarathy Ranganathan", "P."]
+    url: https://www.parthasarathys.com/
+
+"Lo":
+  - firstname: ["David", "David Lo", "D."]
+    url: https://scholar.google.com/citations?user=wRLxsigAAAAJ&hl=en
+
+"Dev":
+  - firstname: ["Sundar", "Sundar Dev", "S."]
+    url: https://scholar.google.com/citations?user=jXfjAncAAAAJ&hl=en
+    
+"Upasani":
+  - firstname: ["Gaurang", "Gaurang Upasani", "G."]
+    url: https://scholar.google.com/citations?user=y9lBfYwAAAAJ&hl=en
+
+"Tsai":
+  - firstname: ["James", "James Tsai", "J."]
+    url: https://dblp.org/pid/55/7883.html
+
+"Andy Anderson":
+  - firstname: ["Andy", "Andy Anderson", "A."]
+    url: https://www.linkedin.com/in/andy-anderson-a9b9402
+
+"Chitlur":
+  - firstname: ["Bhushan", "Bhushan Chitlur", "B."]
+    url: https://www.linkedin.com/in/bhushan-chitlur-948a1b4
+    
+"Zhang":
+  - firstname: ["Zhiru", "Zhiru Zhang", "Z."]
+    url: https://www.csl.cornell.edu/~zhiruz/
+
 "Walia":
   - firstname: ["Sumit", "Sumit Walia", "S."]
     url: https://sumit-walia.github.io/
