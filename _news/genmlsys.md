@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper on the importance of generaliability when using ML for systems has been accepted to [Computer Architecture Letters](https://www.computer.org/csdl/journal/ca)!
+My paper on the importance of generalizability when using ML for systems has been accepted to [Computer Architecture Letters](https://www.computer.org/csdl/journal/ca)!
