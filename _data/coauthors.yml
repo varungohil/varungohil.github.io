@@ -1,3 +1,24 @@
+"Bashir":
+  - firstname: ["Noman", "Noman Bashir"]
+    url: https://noman-bashir.github.io/
+
+"Subramanya":
+  - firstname: ["Anagha Belavadi Subramanya", "Anagha Belavadi"]
+    url: https://scholar.google.com/citations?user=Ll0dqoAAAAAJ&hl=en
+
+"Shahrad":
+  - firstname: ["Mohammad", "Mohammad Shahrad"]
+    url: https://mshahrad.github.io/
+
+"Irwin":
+  - firstname: ["David", "David Irwin"]
+    url: https://www.davidirwin.info/
+
+"Olivetti":
+  - firstname: ["Elsa", "Elsa Olivetti"]
+    url: https://olivetti.mit.edu/
+
+
 "Lazarev":
   - firstname: ["Nikita", "Nikita Lazarev", "N."]
     url: https://www.nikita.tech/
