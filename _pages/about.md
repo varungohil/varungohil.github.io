@@ -6,7 +6,7 @@ permalink: /
 
 profile:
   align: right
-  image: varun_new.JPG
+  image: varunprofilepic.png
   image_circular: True # crops the image to make it circular
   more_info: Varun Gohil
 
