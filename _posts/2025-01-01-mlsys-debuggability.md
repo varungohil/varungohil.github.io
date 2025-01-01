@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Landscape of Debuggability in Machine Learning for Systems
-date: 2024-12-31 14:28:00-0400
-description: My attempt at connecting scattered research on debuggability in ML-assisted systems into an intuitive framework to better navigate this complex research landscape.
-tags: 
+date: 2025-01-01 14:28:00-0400
+description: Connecting diffused research on debuggability of ML-assisted systems into an intuitive framework.
+tags: technical machine-learning computer-systems
 categories: 
 giscus_comments: false
 related_posts: false
@@ -13,7 +13,7 @@ toc:
 
 As someone interested in computer systems and machine learning, the intersection of the two fields - machine learning for systems has always fascinated me.  My experience during internships at Google Cloud and my discussion with friends at other hyperscalar operators has revealed an interesting pattern: while there's widespread interest in using machine learning to improve systems, very few ML-assisted systems make it to production. This gap between academic promise and practical deployment raises important questions about the challenges we face in implementing ML solutions at scale.
 
-Academic literature is filled with proof-of-concepts showing ML-assisted systems outperforming traditional methods and heuristics. However, when it comes to actual deployment, the success stories are surprisingly rare. Through an experience paper on ML for systems published by Microsoft and my observations, I've found that one of the major challenges in the domain is debuggability - the ability to debug the ML-assisted system when the model misbehaves.
+Academic literature is filled with proof-of-concepts showing ML-assisted systems outperforming traditional methods and heuristics. However, when it comes to actual deployment, the success stories are surprisingly rare. Through an [experience paper on ML for systems published by Microsoft](https://dl.acm.org/doi/10.1145/3364684) and my observations, I've found that one of the major challenges in the domain is debuggability - the ability to debug the ML-assisted system when the model misbehaves.
 
 Having made this observation, when I started looking into the academic literature on debuggability, I found it to be quite diffuse. It was scattered across several communities like software engineering, networking, databases, programming languages, and verification. This blog is my attempt at connecting the work done by these communities into an intuitive framework that makes it easier for me to understand and navigate the research landscape of debuggability in ML for systems.
 
@@ -22,17 +22,17 @@ Having made this observation, when I started looking into the academic literatur
 While I’ve talked about debuggability till now, there are three properties at the core of this discussion. Here are the three properties and there definitions :
 
 - Debuggability: the ability to detect and resolve issues that lead to model misbehavior.
-- Interpretability: There are two definitions popularized by Molnar’s book:
+- Interpretability: There are two definitions popularized by [Molnar’s book](https://christophm.github.io/interpretable-ml-book/):
     - Interpretability is the degree to which a human can understand the cause of a decision.
     - Interpretability is the degree to which a human can consistently predict the model’s result.
     
-    There is a subtle difference between the two - the second definition does not require a causal understanding of the model’s behavior. As long as we can predict its behavior reliably, we say the model is interpretable. This is akin to saying that we say the the phenomena of sun-rise is interpretable by the explanation that the “Sun rises in the east every day” with no actual causal understanding of why the sun rises in the east every day.
+    There is a subtle difference between the two - the second definition does not require a causal understanding of the model’s behavior. As long as we can predict its behavior reliably, we say the model is interpretable. This is akin to saying that the phenomena of sun-rise is interpretable by the explanation that the “Sun rises in the east every day” with no actual causal understanding of why the sun rises in the east every day.
     
     The first definition is more strict as it pushes for a causal understanding.
     
 - Generalizability: model’s ability to perform well on data that is not independent and identically distributed (IID) as the model’s training data.
     
-    This is an important property as all ML algorithms rely on the assumption that train and test data are IID. Real world environment frequently violate this assumption due to user behavior pattern changes, workload churn and hardware heterogeneity, and this results in degradation of model performance.
+    This is an important property as all [ML algorithms rely on the assumption that train and test data are IID](https://www.deeplearningbook.org/). Real world environment frequently [violate this assumption](https://ieeexplore.ieee.org/document/10488711) due to user behavior pattern changes, workload churn and hardware heterogeneity, and this results in degradation of model performance.
     
 
 These properties don't exist in isolation and relate to each other in ways that help one property improve the other. Consider this: ML models inherently have finite generalizability, which means they can struggle with data that doesn't match their training distribution. This limitation makes model debuggability essential. When debugging the model, we often need to interpretability to understand  why the model made certain decisions to find the root cause of the problem. The insights we gain from this interpretation process then feed back into improving the model's generalizability.
@@ -63,13 +63,21 @@ One can detect model misbehavior:
 
 ### Reactive Misbehavior Detection
 
-Here, if we have the ground truth available, we can compare predictions with ground truth - for instance, comparing predicted versus actual latencies in power management systems like ReTail. In cases where ground truth isn't readily available, like in autoscaling systems when model output is number of service replicas, we can monitor target metrics such as SLO violations to identify potential issues with model behavior.
+Here, if we have the ground truth available, we can compare predictions with ground truth - for instance, comparing predicted versus actual latencies in power management systems like [ReTail](https://ieeexplore.ieee.org/document/9773201). In cases where ground truth isn't readily available, like in autoscaling systems when model output is number of service replicas, we can monitor target metrics such as SLO violations to identify potential issues with model behavior.
 
 ### Proactive Misbehavior Detection
 
 Proactive detection takes a more preventive approach and can occur at two crucial stages. During deployment we can run uncertainty estimators during/before model’s inference to measure the model's confidence in its predictions, as shown in Figure below. 
 
-![uncertainty-aware-systems.png](assets/img/mlsys-debuggability/uncertainty-aware-systems.png)
+<!-- ![uncertainty-aware-systems.png](assets/img/mlsys-debuggability/uncertainty-aware-systems.png) -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html loading="eager" path="assets/img/mlsys-debuggability/uncertainty-aware-systems.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+   Logical block diagram of an uncertainty-aware system <a href="https://ieeexplore.ieee.org/document/10488711" >(Source)</a>
+</div>
 
 These estimators can be as simple as distance measurements or can be more complex like  density estimation tools or Bayesian neural networks that output probability distributions rather than point estimates. When uncertainty levels are too high, one can choose to ignore the model's predictions entirely.
 
@@ -85,6 +93,8 @@ The goal of data slicing is to identify subsets of data (”slices”) where the
 - **Clustering:** This approach involves grouping similar examples together and treating each cluster as a data slice. If a model underperforms on any of the slices, the user can analyze the examples within that cluster. However, this approach has drawbacks, such as difficulty interpreting high-dimensional data and the need to specify the number of clusters.
 - **Decision Tree Training:** This method trains a decision tree to classify which slices are problematic. The leaves of the decision tree correspond to slices. While this offers a natural interpretation, it may not find all problematic slices, as it only searches non-overlapping slices.
 - **Lattice Searching:** This approach considers a larger search space where slices can overlap. It traverses a lattice of slices in a breadth-first manner, checking for effect size and statistical significance. This method can be more expensive but provides a more comprehensive search. ****
+
+Relevant papers: [Automated Data Slicing](https://www.computer.org/csdl/journal/tk/2020/12/08713886/1a316PSx4kw), [Explaining Mispredictions ](https://dl.acm.org/doi/10.1145/3468264.3468614)
 
 #### Model Verification
 
@@ -105,17 +115,17 @@ The major issue with verification is poor scalability. However, prior works have
 - The models used for systems tasks are small
 - The input features are highly engineered which allows expression of complex system properties
 
-For a more detailed discussion on neural network verification for systems, please refers to [Appendix](https://www.notion.so/The-Landscape-of-Debuggability-in-Machine-Learning-for-Systems-16b370ae59c0800480e3cedbe3cad4bd?pvs=21). Yes, I geeked out and wrote an appendix for a blog post!
+For a more detailed discussion on neural network verification for systems, please refer to [Appendix](#neural-network-for-systems-nn4sysverification). Yes, I geeked out and wrote an appendix for a blog post!
 
 ## Root causing misbehavior by gaining insights
 
-This is where interpretability of model plays a key role. To reiterate the purpose of interpretability is to gain insight to explain the model’s decision making process. However, it is not clear what is a good explanation and what insights help in explaining the model’s decision making process. I briefly talk about some work on [formalizing the notion of a good explanation](https://www.notion.so/The-Landscape-of-Debuggability-in-Machine-Learning-for-Systems-16b370ae59c0800480e3cedbe3cad4bd?pvs=21) at the end of this section.
+This is where interpretability of model plays a key role. To reiterate the purpose of interpretability is to gain insight to explain the model’s decision making process. However, it is not clear what is a good explanation and what insights help in explaining the model’s decision making process. I briefly talk about some work on [formalizing the notion of a good explanation](#notions-of-a-good-explanation) at the end of this section.
 
-The insights one aims to gain from interpreting the model depend on one’s [definition of interpretability.](https://www.notion.so/The-Landscape-of-Debuggability-in-Machine-Learning-for-Systems-16b370ae59c0800480e3cedbe3cad4bd?pvs=21) If on follows the second definition of interpretability given previously, then one is only interested in identifying patterns to model’s decisions which make the model’s decision-making predictable. Here, one is only in answering the question “When does a ML model misbehave?”. On the other hand if  one follows the first definition of interpretability given previously then one is interested in answering “Why does a ML model misbehave?”. 
+The insights one aims to gain from interpreting the model depend on one’s [definition of interpretability.](#core-properties) If one follows the second definition of interpretability given previously, then one is only interested in identifying patterns in model’s decisions which make the model’s decision-making predictable. Here, one is only interested in answering the question “When does a ML model misbehave?”. On the other hand if  one follows the first definition of interpretability given previously, then one is interested in answering “Why does a ML model misbehave?”. 
 
 ### When does a ML model misbehave?
 
-Here, the idea to discover patterns to find when the model is predictably wrong. This usually translates to identifying data samples on which the model misbehaves. [Data slicing](https://www.notion.so/The-Landscape-of-Debuggability-in-Machine-Learning-for-Systems-16b370ae59c0800480e3cedbe3cad4bd?pvs=21) is the approach used for identifying subsets of data on which the model has low performance. These data subsets or slices are identifies using a decision list - a conjunction of feature-value pairs. These slices are considered interpretable when the length of decision list is small i.e they only have a handful of feature-value pairs. 
+Here, the idea to discover patterns to find when the model is predictably wrong. This usually translates to identifying data samples on which the model misbehaves. [Data slicing](#data-slicing) is the approach used for identifying subsets of data on which the model has low performance. These data subsets or slices are identifies using a decision list - a conjunction of feature-value pairs. These slices are considered interpretable when the length of decision list is small i.e they only have a handful of feature-value pairs. 
 
 ### Why does a ML model misbehave?
 
@@ -127,19 +137,24 @@ The idea is to train a inherently interpretable model (surrogate) that mimics th
 
 Since the surrogate is inherently interpretable like a decision tree or spare linear model, one can easily extract the model’s decision making process from it. While this seems great , this approach has the underlsing assumption that since the decisions made by the surrogate mimic that of the original model, the decision-making process of the surrogate also mimics that of the original model. This assumption is not necessarily true. Even if that assumption holds, since the surrogates have low complexity, it is usually not possible to capture the  entire decision-making process of the complex original model in the surrogate. This results in surrogates having lower performance than the original model and exposes a complexity-performance tradeoff.
 
+Relevant Papers: [Interpreting DL-based Networking Systems](https://dl.acm.org/doi/10.1145/3387514.3405859), [PRIMO](https://www.usenix.org/conference/atc22/presentation/hu) 
  
 
 #### Counterfactuals
 
-Counterfactuals help us answer “what-if” questions. For example, *what* would be the predicted latency *if*  the cpu utilization was 2X instead of X? Usually, the explanations here provide data examples where the model’s prediction changes significantly on a minor pertubation to the input or an input feature. Usually counterfactuals are implemented using causal inference where the system is modeled usng Bayesian Networks or Structural Causal Models (SCM). 
+Counterfactuals help us answer “what-if” questions. For example, *what* would be the predicted latency *if*  the cpu utilization was 2X instead of X? Usually, the explanations here provide data examples where the model’s prediction changes significantly on a minor pertubation to the input or an input feature. Usually counterfactuals are implemented using causal inference where the system is modeled usng [Bayesian Networks or Structural Causal Models (SCM)](https://www.bradyneal.com/causal-inference-course). 
 
-The disadvantage of this approach is that for each input sample one can generate multiple counterfactual explanations. Some of this counterfactual explanations might be inconsistent with each other. Hence, it is difficult to figure out which counterfactual explanations to use.
+The disadvantage of this approach is that for [each input sample one can generate multiple counterfactual explanations](https://christophm.github.io/interpretable-ml-book/counterfactual.html). Some of this counterfactual explanations might be inconsistent with each other. Hence, it is difficult to figure out which counterfactual explanations to use.
+
+Relevant Papers: [Counterfactual Explanations for Models of Code](https://dl.acm.org/doi/10.1145/3510457.3513081)
 
 #### Feature attributions
 
-The idea here is to assign an importance score to each feature in the input or provide a relative ranking of feature importances. The intuition being that the model misbehavior can be explained most by the feature having the largest contribution/importance in producing the model’s output. Multiple techniques like [LIME, Shapely values, SHAP](https://christophm.github.io/interpretable-ml-book/local-methods.html) can be used to get this feature importances. For more complex networks like LSTMs or transformers, attention values are used to obtain feature importance. and many time simple techniques can lead to important insights. For example in SINAN, authors were able to identify a faulty configuration of redis using LIME to interpret their CNN model.
+The idea here is to assign an importance score to each feature in the input or provide a relative ranking of feature importances. The intuition being that the model misbehavior can be explained most by the feature having the largest contribution/importance in producing the model’s output. Multiple techniques like [LIME, Shapely values, SHAP](https://christophm.github.io/interpretable-ml-book/local-methods.html) can be used to get this feature importances. For more complex networks like LSTMs or transformers, attention values are used to obtain feature importance. and many time simple techniques can lead to important insights. For example in [SINAN](https://dl.acm.org/doi/10.1145/3445814.3446693), authors were able to identify a faulty configuration of redis using LIME to interpret their CNN model.
 
 These approaches provide useful insight into which features are the most relevant and can act as good starting points in the debugging process. However, their disadvantage is that they do not provide any understanding of what the model is learning and how the features interact together to produce the final prediction. Hence, it has minimal contribution to out understanding of the causal structure of the model’s decision making process.
+
+Relevant Papers: [SINAN](https://dl.acm.org/doi/10.1145/3445814.3446693), [Applying Deep Learning To The Cache Replacement Problem](https://dl.acm.org/doi/10.1145/3352460.3358319)
 
 #### Data attributions
 
@@ -147,17 +162,25 @@ The general idea behind data attribution is to identify the training data sample
 
 It is easy to confuse data attribution with data slicing, however, there is a subtle difference. Data slicing seeks to identify data subsets on which the model misbehaves. On the other hand, data attribution seeks to identify training samples which contribute most towards model (mis)behavior. So for a model behavior, data attribution provides the training examples which contributed the most positively and negatively to the model behavior. The difference is that data attribution tries to distinguishes between the training sample on which the model misbehaves and seeks to give them a contribution score. 
 
-My friends at MIT organized a great tutorial on Data Attribution at ICML 2024. To learn more, refer to their [tutorial](https://ml-data-tutorial.org/).
+My friends at MIT organized a great tutorial on Data Attribution at ICML 2024. To learn more, please refer to their [tutorial](https://ml-data-tutorial.org/).
 
 #### Neuron attributions
 
 The idea here is attribute the model misbehavior to a given fault neuron or a group of neurons in the model. As we are talking about neurons, this approach is targeted towards neural network interpretation. 
 
-MODE identifies the neurons causing misbehavior using a two-step process - first it identifies the layer and next it identifies the neuron within the layer. 
+[MODE](https://dl.acm.org/doi/10.1145/3236024.3236082) identifies the neurons causing misbehavior using a two-step process - first it identifies the layer and next it identifies the neuron within the layer. 
 
 For doing so it selects a layer, it freezes the network upto the selected layer and adds a new output later (shown in figure below). Then it trains just the output layer again. It repeats the procedure for all hidden layers in the network. It selects the first hidden layer for which the model’s accuracy it higher or equal to the original model’s accuracy. The intuition is that the features represented by the selected layer are good enough to perform the prediction and later layers are not essential . Finally, to select the neuron within the selected layer, the authors analyze the weights between the selcted layer and the new output layer. Higher weight magniutde signifies higher importance. 
 
-![state-diff.png](assets/img/mlsys-debuggability/state-diff.png)
+<!-- ![state-diff.png](assets/img/mlsys-debuggability/state-diff.png) -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html loading="eager" path="assets/img/mlsys-debuggability/state-diff.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Overview of frozen model generation for layer and neuron selection <a href="https://dl.acm.org/doi/10.1145/3236024.3236082">(Source)</a>
+</div>
 
 The machine learning community has also directed its efforts towards “*mechanistic interpretability*” - a field aimed at reverse-engineering the model. Initial efforts have shown that neurons/neuron groups within a model can be mapped to human-understandable concepts and algorithms learned by model to combine the different concepts together to form the output. Future efforts in this direction by systems researchers can help reveal the underlying algorithm learned by the model and help us move forward from current attribution-based appraoches. 
 
@@ -169,7 +192,7 @@ Christopher Molnar says that  a good explanation has the following properties - 
 
 [Jia et. al.](https://arxiv.org/pdf/2306.06134) have formalized the notion of a “sound explanation” by restricting it to four properties- specificity, additivity, completeness, and baseline invariance.
 
-Here are the definitions of these properties (copied from the paper):
+Here are the definitions of these properties (copied from the [paper](https://arxiv.org/pdf/2306.06134)):
 
 - Specificity: An interpretation should be specific to influential inputs: it should assign zero scores to inputs that do not influence function values.
 - Additivity An interpretation is additive if its attribution decomposes over function addition.
@@ -184,7 +207,7 @@ Model’s parameters dictate the model’s behavior. Hence, correcting the model
 
 ### Retraining
 
-The most obvious way to correct mode behavior is to retrain the model on a dataset which has examples on which the model misbehaves. Machine learning models deployed in production are usually trained periodically on all collected data to handle issues of distribution drifts (poor generalization).
+The most obvious way to correct mode behavior is to retrain the model on a dataset which has examples on which the model misbehaves. Machine learning models deployed in production are [usually trained periodically](https://ieeexplore.ieee.org/document/9407135) on all collected data to handle issues of distribution drifts (poor generalization).
 
 Unfortunately, training is a time-consuming, resource intense and costly process. Hence,  any efforts to optimize the training process are useful. 
 
@@ -211,7 +234,7 @@ To answer these questions, [data attribution methods](https://www.notion.so/The-
 - training set examples which had most negative contribution to model misbehavior.
 - training set examples which had the most positive contribution to desired model behavior.
 
-To decide how many examples to include, once can decide a therashold attribution value and include examples above that threshold.
+To decide how many examples to include, once can decide a threshold attribution value and include examples above that threshold.
 
 Currently, data attribution methods work well on strongly convex models, however this is a growing field and I hope we will soon have efficient predictive attribution estimators for deep neural networks as well.
 
@@ -219,7 +242,7 @@ Currently, data attribution methods work well on strongly convex models, however
 
 If one uses neuron-level attribution methods to interpret the model, one can map a subset of model or a neuron to a human-understandable concept. If this is possible, then one can potentially just change the weight (parameter) associated with that neuron to change model behavior when dealing with the corresponding concept. 
 
-This has been shown to work well on non-systems based ML models. Famous examples are the ROME paper and the Golden-Gate Claude. The former identifies neurons with an LLM that store the fact that “Colosseum is in ROME” while the latter identifies neurons in Claude corresponding to the Golden Gate Bridge. By modifying the neurons, the researchers show that they can change fact learned by the model - that is the model will now store the fact that “Colosseum is in Paris” or can force to model to focus on the concept even when not required; in case of Golden Gate bridge Claude, the LLM would inevitably try to include something about the golden gate bridge in its responses. 
+This has been shown to work well on non-systems based ML models. Famous examples are the [ROME paper](https://arxiv.org/abs/2202.05262) and the [Golden-Gate Claude](https://www.anthropic.com/news/golden-gate-claude). The former identifies neurons with an LLM that store the fact that “Colosseum is in ROME” while the latter identifies neurons in Claude corresponding to the Golden Gate Bridge. By modifying the neurons, the researchers show that they can change fact learned by the model - that is the model will now store the fact that “Colosseum is in Paris” or can force to model to focus on the concept even when not required; in case of Golden Gate bridge Claude, the LLM would inevitably try to include something about the golden gate bridge in its responses. 
 
 While there has not been MLSys work on model surgery I believe that this would be greatly beneficial in the field and eliminate a large portion of debugging overhead. 
 
@@ -237,15 +260,15 @@ The simples way to prevent known errors is to limit the model output by adding s
 
 ### Use predictability of model misbehavior
 
-As [discussed previously](https://www.notion.so/The-Landscape-of-Debuggability-in-Machine-Learning-for-Systems-16b370ae59c0800480e3cedbe3cad4bd?pvs=21), there have been proposals to add an uncertainty estimator to systems to estimate the model’s confidence in it prediction. When the uncertainty is high, the system may choose to ignore the model’s prediction and fall back to a well-studies heuristic method. Further, the same strategy can be used when we have identified data subsets on which model misbehaves using data slicing before deployment. 
+As [discussed previously](#proactive-misbehavior-detection), there have been proposals to add an uncertainty estimator to systems to estimate the model’s confidence in it prediction. When the uncertainty is high, the system may choose to ignore the model’s prediction and fall back to a well-studies heuristic method. Further, the same strategy can be used when we have identified data subsets on which model misbehaves using data slicing before deployment. 
 
-In reinforcement learning settings, similar proposals are popular under the name of “*online safety assurance”.* At a high level these proposals, fall back to a well-studies heuristic policy when the L systems an “unsafe” region during its exploration phase.
+In reinforcement learning settings, similar proposals are popular under the name of [“*online safety assurance”*](https://arxiv.org/abs/2010.03625). At a high level these proposals, fall back to a well-studies heuristic policy when the RL system reaches an “unsafe” region during its exploration phase.
 
 ### Use a model ensemble
 
 Here the idea is to use an ensemble of “expert” models and dynamically select the best model from the ensemble for prediction for each input sample. Most of the research focus here seems to be on model selection algorithms. 
 
-The trivial selection algorithm would be to run  all models and then report some aggregate metric of all model outputs. However this is resource intensive. Alternative proposals use a neural network to select which model(s) to use for prediction. RECL use a gating network which assigns a score to each model in the ensemble. Models with score higher than a threshold are used for prediction. Ivy use meta-learning to learn a model selection policy and uses that to select a single model that is used for prediction. 
+The trivial selection algorithm would be to run  all models and then report some aggregate metric of all model outputs. However this is resource intensive. Alternative proposals use a neural network to select which model(s) to use for prediction. [RECL](https://www.usenix.org/conference/nsdi23/presentation/khani) use a gating network which assigns a score to each model in the ensemble. Models with score higher than a threshold are used for prediction. [Ivy](https://arxiv.org/abs/2409.19867) use meta-learning to learn a model selection policy and uses that to select a single model that is used for prediction. 
 
 ### Change model structure
 
@@ -257,21 +280,54 @@ Onelearn the conditional probabilities between variables using vanilla machine l
 
 The downside of this approach is that sometimes the causal relationships are not obvious or too difficult to capture. Further, a fundamental research question in causality is how does one know the number of latent confounders? Hence, researchers using this need to guess the number of latent confounders and hope that their guess leads to a decent approximation of the actual latent confounders.
 
+Relevant Papers: [SAGE](https://dl.acm.org/doi/10.1145/3445814.3446700), [CausalSim](https://www.usenix.org/conference/nsdi23/presentation/alomar)
+
+A recent work [OSPrey](https://people.csail.mit.edu/arashne/papers/OSprey.pdf), has shown that separating the model into multiple parts - one for learning system context, one for learning workload characteristics and one for cobining the previosu two parts, can be beneficial for generalization.
+
 ### Change learning algorithm
 
 The reinforcement learning community has designed several learning algorithms, few of which have shown to improve generalization of learned policies. One such algorithm is curriculum learning.
 
 In curriculum learning  the training environment distribution is changed to gradually increase the difficulty of training environments or decreasing order of rewardingness. The challenge in applying this training algorithm to MLSys is that we do not have a clear way to measuring the difficulty or rewardingness of a training environment. 
 
-GENET proposes gap-to-baseline as a difficulty measure - how much the RL policy’s performance falls behind a traditional rule-based baseline. If environment has large gap-to-baseline, since the baseline already shows how to perform better in the environment, the RL model may learn to “imitate” the baseline’s known rules while training in the same environment, bringing it on par with—if not better than—the baseline. On the flip side, if an environment has a small or even negative gap-to-baseline, chances are that the environment is intrinsically hard (a possible reason why the rule-based baseline performs badly), or the current RL policy already performs well and thus training on it is unlikely to improve performance by a large margin. GENET applies this algorithm to networking problems like adaptive bit rate selection and congestion control. 
+[GENET](https://dl.acm.org/doi/10.1145/3544216.3544243) proposes gap-to-baseline as a difficulty measure - how much the RL policy’s performance falls behind a traditional rule-based baseline. If environment has large gap-to-baseline, since the baseline already shows how to perform better in the environment, the RL model may learn to “imitate” the baseline’s known rules while training in the same environment, bringing it on par with—if not better than—the baseline. On the flip side, if an environment has a small or even negative gap-to-baseline, chances are that the environment is intrinsically hard (a possible reason why the rule-based baseline performs badly), or the current RL policy already performs well and thus training on it is unlikely to improve performance by a large margin. GENET applies this algorithm to networking problems like adaptive bit rate selection and congestion control. 
 
-Another proposal is FLASH, which learns a app-environment embedding and uses it for downstream tasks like schedule and autoscaling. To adapt to distribution shifts, it uses metalearning to constant modify the app-environment embedding generator. The high-level diagram is below:
+Another proposal is [FLASH](https://proceedings.mlsys.org/paper_files/paper/2024/hash/f502981cbe221d857ad409450a7917c3-Abstract-Conference.html), which learns a app-environment embedding and uses it for downstream tasks like schedule and autoscaling. To adapt to distribution shifts, it uses metalearning to constant modify the app-environment embedding generator. The high-level diagram is below:
 
-![flash.png](assets/img/mlsys-debuggability/flash.png)
+<!-- ![flash.png](assets/img/mlsys-debuggability/flash.png) -->
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html loading="eager" path="assets/img/mlsys-debuggability/flash.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Flash's architecture, showing the integration between meta learner and base learner, for both supervised learning (SL) and reinforcement learning (RL). <a href="https://proceedings.mlsys.org/paper_files/paper/2024/hash/f502981cbe221d857ad409450a7917c3-Abstract-Conference.html">(Source)</a>
+</div>
+
+An alternate propsal, [Ourboros](https://proceedings.mlsys.org/paper_files/paper/2023/hash/f025a252767e89e63426e42b4716d311-Abstract-mlsys2023.html), proposes including the verifier in the training pipeline to ensure that the trained networks follow the provided specifications. Figures below show the high-level block diagrams of such verifier-in-the-loop training processes. 
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html loading="eager" path="assets/img/mlsys-debuggability/train-verify.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html loading="eager" path="assets/img/mlsys-debuggability/ourboros.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
+<div class="caption">
+    Logical block diagrams of proposals for verification-aware training <a href="https://proceedings.mlsys.org/paper_files/paper/2023/hash/f025a252767e89e63426e42b4716d311-Abstract-mlsys2023.html">(Source)</a>
+</div>
 
 ## Appendix
 
 ### Neural Network for Systems (NN4Sys)Verification
+
+Relevant papers and Sources:
+- [Verifying learning-augmented systems](https://dl.acm.org/doi/abs/10.1145/3452296.3472936)
+- [Towards Scalable Verification of Deep Reinforcement Learning](https://ieeexplore.ieee.org/document/9617684)
+- [AutoSpec: Automated Generation of Neural Network Specifications](https://arxiv.org/abs/2409.10897)
+- [Specification Generation for Neural Networks in Systems](https://arxiv.org/abs/2412.03028)
+- [NN4SysBench: Characterizing Neural Network Verification for Computer Systems](https://openreview.net/forum?id=mhjRudcHcB#discussion)
+- [Building Verified Neural Networks for Computer Systems with Ouroboros](https://proceedings.mlsys.org/paper_files/paper/2023/hash/f025a252767e89e63426e42b4716d311-Abstract-mlsys2023.html)
 
 Neural networks for systems are attractive candidate for verification. These networks have well-engineered features which allows for smaller network sizes and ease in specifying complex relationships between features. These properties help mitigate the scalability bottlenecks of neural network verification.
 
@@ -319,13 +375,15 @@ Hence, if a veriﬁer ﬁnds that a k-induction query is UNSAT, we know that the
 
 Whirl 2 proposal combines bounded model checking and k-induction as shown in figure below to either prove or refute a property/specification.
 
-![verify.png]()
+<!-- ![verify.png]() -->
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/mlsys-debuggability/verify.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+        {% include figure.html loading="eager" path="assets/img/mlsys-debuggability/verify.png" max-width="50%" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
-
+<div class="caption">
+    A simple, elegant caption looks good between image rows, after each row, or doesn't have to be there at all.
+</div>
 Next, I’ll define invariant inference. 
 
 An invariant is a partition of the state space into two disjoint sets such that the two sets are disconnected. Such invariants are useful when all initial states are in one set and all bad states are in the other set. This invariant would show that none of the bad states are reachable.  
@@ -337,5 +395,3 @@ These verification approaches do have there fair share of limitations:
 - Poor scalability with network size (exponential). This is further exacerbated when verifying RL policy networks as one has to duplicate the network multiple times, once for each RL step.
 - Current verifiers work only for feedforward neural networks with piece-wise linear activation functions.
 - Current verifiers do not support monotonic specifications.
-
-# References
