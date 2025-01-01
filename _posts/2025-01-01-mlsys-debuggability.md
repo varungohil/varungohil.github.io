@@ -384,7 +384,7 @@ Whirl 2 proposal combines bounded model checking and k-induction as shown in fig
     </div>
 </div>
 <div class="caption">
-    A simple, elegant caption looks good between image rows, after each row, or doesn't have to be there at all.
+    Diagram shows how Whirl 2.0 uses both bounded model checking and k-induction in tandem to either prove or refute a property. <a href="(https://ieeexplore.ieee.org/document/9617684)">(Source)</a>
 </div>
 Next, I’ll define invariant inference. 
 
