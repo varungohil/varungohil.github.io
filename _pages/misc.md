@@ -3,7 +3,7 @@ layout: page
 permalink: /misc/
 title: Misc
 description: Cool content!
-nav: true
+nav: false
 nav_order: 6
 display_categories: [misc]
 horizontal: false
