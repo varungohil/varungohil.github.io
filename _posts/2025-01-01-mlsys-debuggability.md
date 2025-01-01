@@ -321,7 +321,7 @@ An alternate propsal, [Ourboros](https://proceedings.mlsys.org/paper_files/paper
 
 ## Appendix
 
-### Neural Network for Systems (NN4Sys)Verification
+### Neural Network for Systems (NN4Sys) Verification
 
 Relevant papers and Sources:
 - [Verifying learning-augmented systems](https://dl.acm.org/doi/abs/10.1145/3452296.3472936)
