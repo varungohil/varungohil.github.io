@@ -69,7 +69,7 @@ Here, if we have the ground truth available, we can compare predictions with gro
 
 Proactive detection takes a more preventive approach and can occur at two crucial stages. During deployment we can run uncertainty estimators during/before model’s inference to measure the model's confidence in its predictions, as shown in Figure below. 
 
-![image.png](The%20Landscape%20of%20Debuggability%20in%20Machine%20Learning%2016b370ae59c0800480e3cedbe3cad4bd/image.png)
+![uncertainty-aware-systems.png](assets/img/mlsys-debuggability/uncertainty-aware-systems.png)
 
 These estimators can be as simple as distance measurements or can be more complex like  density estimation tools or Bayesian neural networks that output probability distributions rather than point estimates. When uncertainty levels are too high, one can choose to ignore the model's predictions entirely.
 
@@ -157,7 +157,7 @@ MODE identifies the neurons causing misbehavior using a two-step process - first
 
 For doing so it selects a layer, it freezes the network upto the selected layer and adds a new output later (shown in figure below). Then it trains just the output layer again. It repeats the procedure for all hidden layers in the network. It selects the first hidden layer for which the model’s accuracy it higher or equal to the original model’s accuracy. The intuition is that the features represented by the selected layer are good enough to perform the prediction and later layers are not essential . Finally, to select the neuron within the selected layer, the authors analyze the weights between the selcted layer and the new output layer. Higher weight magniutde signifies higher importance. 
 
-![image.png](The%20Landscape%20of%20Debuggability%20in%20Machine%20Learning%2016b370ae59c0800480e3cedbe3cad4bd/image%201.png)
+![state-diff.png](assets/img/mlsys-debuggability/state-diff.png)
 
 The machine learning community has also directed its efforts towards “*mechanistic interpretability*” - a field aimed at reverse-engineering the model. Initial efforts have shown that neurons/neuron groups within a model can be mapped to human-understandable concepts and algorithms learned by model to combine the different concepts together to form the output. Future efforts in this direction by systems researchers can help reveal the underlying algorithm learned by the model and help us move forward from current attribution-based appraoches. 
 
@@ -267,7 +267,7 @@ GENET proposes gap-to-baseline as a difficulty measure - how much the RL policy�
 
 Another proposal is FLASH, which learns a app-environment embedding and uses it for downstream tasks like schedule and autoscaling. To adapt to distribution shifts, it uses metalearning to constant modify the app-environment embedding generator. The high-level diagram is below:
 
-![image.png](The%20Landscape%20of%20Debuggability%20in%20Machine%20Learning%2016b370ae59c0800480e3cedbe3cad4bd/image%202.png)
+![flash.png](assets/img/mlsys-debuggability/flash.png)
 
 ## Appendix
 
@@ -319,7 +319,7 @@ Hence, if a veriﬁer ﬁnds that a k-induction query is UNSAT, we know that the
 
 Whirl 2 proposal combines bounded model checking and k-induction as shown in figure below to either prove or refute a property/specification.
 
-![image.png](The%20Landscape%20of%20Debuggability%20in%20Machine%20Learning%2016b370ae59c0800480e3cedbe3cad4bd/image%203.png)
+![verify.png](assets/img/mlsys-debuggability/verify.png)
 
 Next, I’ll define invariant inference. 
 
