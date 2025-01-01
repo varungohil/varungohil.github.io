@@ -216,13 +216,15 @@ There seem to be two questions that are important to answer when optimizing retr
 - When to retrain the model?
 - On what data to retrain the model?
 
-**When to retrain the model?**
+#### When to retrain the model?
 
 We want to retrain the model only when needed. That is to say, when the we see a distribution shift in the input data (data distribution is OOD) and the benefit of retraining out weights its overhead. 
 
 It is easy to estimate the overhead of retraining since one knows it from past experience. However, is non-trivial to estimate the benefit of retraining the model. Instead one can approximate benefit of retraining by using the uncertainty of model’s predictions averaged over recent predictions. One can also use Out-Of-Distribution (OOD) detection methods to detect a distribution shift and trigger retraining based on this detector.  
 
-**On what data to retrain the model?**
+Relevant paper: [DecTrain](https://arxiv.org/abs/2410.02980#:~:text=We%20propose%20DecTrain%2C%20a%20new,with%20the%20predicted%20accuracy%20gain.)
+
+#### On what data to retrain the model?
 
 The retraining dataset should obviously include examples of data on which the model misbehaves. The dataset should also include examples where the model already behaves well. Examples of both types (where model misbehaves and where model behaves well) are essential to avoid dataset imbalance issues. 
 
