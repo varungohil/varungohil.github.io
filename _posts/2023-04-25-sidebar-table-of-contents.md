@@ -1,10 +1,10 @@
 ---
 layout: post
-title: The Landscape of Debuggability in Machine Learning for Systems
+title: Landscape of Debuggability in Machine Learning for Systems
 date: 2023-04-25 10:14:00-0400
-description: an example of a blog post with table of contents on a sidebar
-tags: formatting toc sidebar
-categories: sample-posts
+description: My attempt at connecting scattered research on debuggability in ML-assisted systems into an intuitive framework to better navigate this complex research landscape.
+tags: 
+categories: 
 giscus_comments: false
 related_posts: false
 toc:
