@@ -319,7 +319,12 @@ Hence, if a veriﬁer ﬁnds that a k-induction query is UNSAT, we know that the
 
 Whirl 2 proposal combines bounded model checking and k-induction as shown in figure below to either prove or refute a property/specification.
 
-![verify.png](assets/img/mlsys-debuggability/verify.png)
+![verify.png]()
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/mlsys-debuggability/verify.png" class="img-fluid rounded z-depth-1" zoomable=true %}
+    </div>
+</div>
 
 Next, I’ll define invariant inference. 
 
