@@ -239,5 +239,9 @@
             {% highlight bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endhighlight %}
           </div>
           {%- endif %}
+
+          {% if entry.award -%}
+          <div style="color: red;"><img src="/assets/img/medal.png" alt="award" style="width: 20px; height: 20px; margin-right: 5px; vertical-align: middle;"> {{entry.award}} </div>
+          {%- endif %}
         </div>
       </div>
