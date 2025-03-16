@@ -124,7 +124,7 @@ The best part? It's super easy to set up. Just a few config file tweaks, and you
 
 
 Here are the full `/etc/chrony/chrony.conf` config files if you are interested:
-- [Initial config file for node-0](https://varungohil.github.io/assets/img/time-sync/initial-chrony-conf-0.conf)
-- [Initial config file for node-1](https://varungohil.github.io/assets/img/time-sync/initial-chrony-conf-1.conf)
-- [Modified config file for node-0](https://varungohil.github.io/assets/img/time-sync/final-chrony-conf-0.conf)
-- [Modified config file for node-1](https://varungohil.github.io/assets/img/time-sync/final-chrony-conf-1.conf)
+- [Initial config file for node-0](/assets/img/time-sync/initial-chrony-conf-0.txt)
+- [Initial config file for node-1](/assets/img/time-sync/initial-chrony-conf-1.txt)
+- [Modified config file for node-0](/assets/img/time-sync/final-chrony-conf-0.txt)
+- [Modified config file for node-1](/assets/img/time-sync/final-chrony-conf-1.txt)
