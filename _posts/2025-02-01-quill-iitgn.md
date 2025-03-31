@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quill-IITGN interview
+title: Interview with Quill - IIT Gandhinagar
 date: 2025-02-01 05:53:00
 description: Answers FAQs about my undergraduate career.
 categories: 
