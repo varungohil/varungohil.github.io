@@ -8,14 +8,14 @@ categories:
 giscus_comments: false
 related_posts: false
 toc:
-  beginning: false
+  beginning: true
 ---
 
 
 Ever tried to run distributed experiments only to have your Jaeger traces and results ruined by out-of-sync time? Yeah, been there! After banging my head against this problem for a while, I finally found a simple solution to get microsecond-level time synchronization between [CloudLab](https://cloudlab.us/) machines. Let me walk you through it!
 
 
-## The Problem: Internet NTP Is Too Slow
+#### **The Problem: Internet NTP Is Too Slow**
 
 When you setup up [CloudLab](https://cloudlab.us/) machines, they're configured to sync their time with Internet NTP servers. Sounds great, but there's a problem - it leads to significant millisecond-level time differences between machines that are synchronizing with that internet NTP server.
 
@@ -66,7 +66,7 @@ These lines tell chrony to synchronize your machine's time with time from one of
 
 
 
-## The Solution: Local Time Server
+#### **The Solution: Local Time Server**
 Here's the simple and obvious trick: instead of having all your machines sync with Internet NTP servers, designate one machine as the local time server and have the others sync with it. This avoids the internet access latency, lowers your root delay and dramatically improves time synchronization.
 
 Here, I'm going to designate node-0 as my local time server and synchronize node-1's time with my local node-0 time server. Here's how to set it up:
