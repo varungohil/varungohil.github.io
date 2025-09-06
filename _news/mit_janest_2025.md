@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Presented our work on improving the relieability of ML for Systems at the MIT/Jane St Research Symposium.
+Presented our work on improving the reliability of ML for Systems at the MIT/Jane St Research Symposium.
