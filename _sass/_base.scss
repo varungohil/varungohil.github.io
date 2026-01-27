@@ -287,8 +287,19 @@ blockquote {
         transition-property: all 0.2s ease-in-out;
       }
 
+      .icon-x {
+        display: inline-block;
+        vertical-align: -0.125em;
+        color: var(--global-text-color);
+        transition: color 0.2s ease-in-out;
+      }
+
       &:hover {
         i::before {
+          color: var(--global-theme-color);
+        }
+
+        .icon-x {
           color: var(--global-theme-color);
         }
       }
@@ -362,8 +373,19 @@ blockquote {
         transition-property: all 0.2s ease-in-out;
       }
 
+      .icon-x {
+        display: inline-block;
+        vertical-align: -0.125em;
+        color: var(--global-theme-color);
+        transition: color 0.2s ease-in-out;
+      }
+
       &:hover {
         i::before {
+          color: var(--global-theme-color);
+        }
+
+        .icon-x {
           color: var(--global-theme-color);
         }
       }
