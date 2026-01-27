@@ -17,16 +17,19 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 
-Hi there! Welcome to my virtual estate. I am a Ph.D. student at [MIT Computer Science and Artificial Intelligence Lab (CSAIL)](https://www.csail.mit.edu/) working with [Prof. Christina Delimitrou](https://people.csail.mit.edu/delimitrou/).
+Hi! I am a Ph.D. student at [MIT CSAIL](https://www.csail.mit.edu/) working with [Prof. Christina Delimitrou](https://people.csail.mit.edu/delimitrou/). I design and optimize datacenter infrastructure by leveraging machine learning to drive system performance and efficiency.
 
-I'm interested in desigining the next-generation datacenter servers for emerging microservice and serverless applications.
-Currently, my research tries to answer the following questions: 
-- How to decide resource capacities when provisioning servers? 
--  What new hardware knobs to add to servers to help accommodate heterogeneity in applications and what are the best ways to tune such knobs? 
+My current research explores:
+- Resilient ML-driven systems: Improving reliability of systems that use ML policies for autonomous decision-making.
+- LLM-driven heuristic design: Using LLMs to discover and synthesize novel heuristics for system management.
+- Accelerator design and programming: Exploring LLM-driven accelerator design and defining programming abstractions that simplify hardware optimization.
 
-I'm also interested in addressing issues of interpretability and generalizability of machine learning models when they are used for computer systems tasks.
 
-I completed my undergraduate at [IIT Gandhinagar](https://iitgn.ac.in/). During my undergraduate days, I worked with [Prof. Manu Awasthi](https://manuawasthi.in/), [Prof. Joycee Mekie](https://joycee.people.iitgn.ac.in/) and [Prof. Rajeev Balasubramonian](https://users.cs.utah.edu/~rajeev/) on  approximate computing, computer arithmetic representations, neural network compression, computer architecture for smartphones, hybrid memory systems and autonomous vehicles.
+I earned my Master’s at MIT, where I developed a frequency-aware request scheduler for microservices by modifying the Thrift RPC framework. I completed my undergraduate studies at [IIT Gandhinagar](https://iitgn.ac.in/), during which I worked on approximate computing, memory systems, and hardware for autonomous vehicles with Profs. [Manu Awasthi](https://manuawasthi.in/), [Joycee Mekie](https://joycee.people.iitgn.ac.in/) and [Rajeev Balasubramonian](https://users.cs.utah.edu/~rajeev/)
+
+<!-- For my Master's thesis I designed a request-level power manager for microservices, for which I modified the Thrift RPC framework to perform intelligent frequency-aware request scheduling.
+
+I completed my undergraduate at [IIT Gandhinagar](https://iitgn.ac.in/). During my undergraduate days, I worked with [Prof. Manu Awasthi](https://manuawasthi.in/), [Prof. Joycee Mekie](https://joycee.people.iitgn.ac.in/) and [Prof. Rajeev Balasubramonian](https://users.cs.utah.edu/~rajeev/) on  approximate computing, computer arithmetic representations, neural network compression, computer architecture for smartphones, hybrid memory systems and autonomous vehicles. -->
 <!-- My research interests span the entire computing stack. I am specifically fascinated by the subject of computer architecture and firmly believe that better system design would play crucial role for progress in computer technology. -->
 
 <!-- , be it machine learning or genomics. -->
