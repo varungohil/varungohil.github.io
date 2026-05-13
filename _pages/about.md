@@ -17,13 +17,17 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 
-Hi! I am a Ph.D. student at [MIT CSAIL](https://www.csail.mit.edu/) working with [Prof. Christina Delimitrou](https://people.csail.mit.edu/delimitrou/). I design and optimize datacenter infrastructure by leveraging machine learning to drive system performance and efficiency.
+Hi! I am a Ph.D. student at [MIT CSAIL](https://www.csail.mit.edu/) working with [Prof. Christina Delimitrou](https://people.csail.mit.edu/delimitrou/). My work focuses on developing reusable mechanisms/recipes that enable safe and efficient integration of machine learning into computer systems.
 
-My current research explores:
+My current focus is on:
+- Improving resiliency of ML-driven computer systems using uncertainty estimation. 
+- Synthesizing novel and interpretable heuristics for managing computer systems using LLM-based discovery.
+
+<!--My current research explores:
 - Resilient ML-driven systems: Improving reliability of systems that use ML policies for autonomous decision-making.
 - LLM-driven heuristic design: Using LLMs to discover and synthesize novel heuristics for system management.
 - Accelerator design and programming: Exploring LLM-driven accelerator design and defining programming abstractions that simplify hardware optimization.
-
+-->
 
 I earned my Master’s at MIT, where I developed a frequency-aware request scheduler for microservices by modifying the Thrift RPC framework. I completed my undergraduate studies at [IIT Gandhinagar](https://iitgn.ac.in/), during which I worked on approximate computing, memory systems, and hardware for autonomous vehicles with Profs. [Manu Awasthi](https://manuawasthi.in/), [Joycee Mekie](https://joycee.people.iitgn.ac.in/) and [Rajeev Balasubramonian](https://users.cs.utah.edu/~rajeev/).
 
