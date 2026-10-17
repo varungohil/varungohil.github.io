@@ -2047,9 +2047,16 @@ ul.pub-list > li { margin-bottom: 1.4rem; text-align: left; }
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--heading);
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.2rem;
   letter-spacing: 0.02rem;
   line-height: 1.35;
+}
+.episode-date {
+  font-size: 1.35rem;
+  font-style: normal;
+  color: var(--muted);
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.02rem;
 }
 .episode-summary {
   font-size: 1.55rem;
@@ -2057,10 +2064,6 @@ ul.pub-list > li { margin-bottom: 1.4rem; text-align: left; }
   margin: 0;
   text-align: left;
   line-height: 1.45;
-}
-.episode-date {
-  font-style: normal;
-  color: var(--muted);
 }
 .episode-row:hover .episode-title { color: var(--link); }
 
