@@ -1861,7 +1861,7 @@ img.zoom-img {
 .tldr-column .contact {
   font-size: 1.7rem;
   margin-top: 0.3rem;
-  margin-bottom: 0;
+  margin-bottom: 2.5rem;
   color: var(--muted);
 }
 
