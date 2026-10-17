@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <title>Work | Varun Gohil</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Varun Gohil">
+  <meta name="description" content="Research and experience — Varun Gohil"/>
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/styles.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/vg.png?v=2" sizes="512x512">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png?v=2" sizes="16x16">
+  <link rel="shortcut icon" href="/favicons/favicon.ico?v=2">
+</head>
+
+<body>
+    <div class="container subpage">
+        <nav class="top-banner">
+          <a href="/" class="brand">Varun Gohil</a>
+          <span class="nav">
+            <a href="/">Home</a><span class="sep">·</span>
+            <a href="/work/" class="active">Work</a><span class="sep">·</span>
+            <a href="/publications/">Publications</a><span class="sep">·</span>
+            <a href="/blog/">Blog</a>
+          <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>
+            <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          </span>
+        </nav>
+
+        <p>
+          I am a Ph.D. student at
+          <a href="https://www.csail.mit.edu/">MIT CSAIL</a>
+          working with
+          <a href="https://people.csail.mit.edu/delimitrou/">Prof. Christina Delimitrou</a>.
+        </p>
+
+        <h3>Current Research</h3>
+        <p>
+          My research develops reusable mechanisms and recipes that enable safe and
+          efficient integration of machine learning into computer systems.
+        </p>
+        <ul>
+          <li>
+            <b>Resilient ML-driven systems</b>:
+            Using uncertainty as a primitive to make ML-driven systems more
+            generalizable, interpretable, and fast under distribution shifts.
+            [<a href="/pubs/mlsys26.pdf">MLSys 2026</a>,
+             <a href="https://ieeexplore.ieee.org/document/10488711">CAL 2024</a>].
+          </li>
+          <li>
+            <b>Agents for system design and operation</b>:
+            Building agents that help design and operate computer systems, from
+            hardware–software co-design to cloud performance debugging, and using
+            uncertainty so they act when confident and escalate when not
+            [<a href="https://arxiv.org/abs/2610.02376">Coco</a>,
+             <a href="https://arxiv.org/abs/2510.22087">QuArch</a>].
+          </li>
+        </ul>
+
+        <h3>Background</h3>
+        <p>
+          Before my current line of work, I spent formative years at
+          <a href="https://iitgn.ac.in/">IIT Gandhinagar</a>
+          working with Profs.
+          <a href="https://manuawasthi.in/">Manu Awasthi</a>,
+          <a href="https://joycee.people.iitgn.ac.in/">Joycee Mekie</a>,
+          and
+          <a href="https://users.cs.utah.edu/~rajeev/">Rajeev Balasubramonian</a>
+          on approximate computing
+          (<a href="/pubs/fixed-posit.pdf">Fixed-Posit</a>),
+          memory systems
+          (<a href="/pubs/hotstorage20_paper_v.pdf">HotStorage 2020</a>),
+          and mobile architecture
+          (<a href="/pubs/META.pdf">META</a>,
+          <a href="/pubs/bench2021.pdf">TBench 2021</a>).
+        </p>
+        <p>
+          Early on at MIT, for my Master’s, I built a frequency-aware request
+          scheduler for microservices by modifying the Thrift RPC framework.
+          Later on, I contributed to serverless systems
+          (<a href="https://www.usenix.org/system/files/osdi24-lazarev_1.pdf">Sabre @ OSDI</a>)
+          and carbon-aware scheduling systems
+          (<a href="https://dl.acm.org/doi/10.1145/3698038.3698542">SoCC 2024</a>).
+        </p>
+
+        <h3>Community</h3>
+        <ul>
+          <li>
+            I maintain
+            <a href="https://ml-for-systems.github.io/">ml-for-systems.github.io</a>
+            to track ML-for-Systems papers in top-tier systems venues.
+          </li>
+          <li>
+            I regularly review for the
+            <a href="https://mlforsystems.org/">ML for Systems@NeurIPS</a> and
+            <a href="https://sites.google.com/view/mlarchsys">MLArchSys</a>
+            workshops.
+          </li>
+          <li>
+            I regularly TA for the
+            <a href="https://sites.google.com/view/datacenter-computing-spring-24">Datacenter Computing</a>
+            and <a href="https://6191.mit.edu/"> Computation Structures</a> courses at MIT.
+          </li>
+        </ul>
+
+      <div class="footer">
+        <hr class="thin" />
+        <p style="margin-bottom: 0">Template from <a href="https://suvinay.github.io/">Suvinay Subramanian</a></p>
+      </div>
+
+    </div>
+  <script src="/theme.js"></script>
+</body>
+</html>

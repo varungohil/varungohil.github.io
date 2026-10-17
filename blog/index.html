@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <title>Blog | Varun Gohil</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Varun Gohil">
+  <meta name="description" content="Blog — Varun Gohil"/>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/vg.png?v=2" sizes="512x512">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png?v=2" sizes="16x16">
+  <link rel="shortcut icon" href="/favicons/favicon.ico?v=2">
+</head>
+<body>
+  <div class="container subpage">
+    <nav class="top-banner">
+      <a href="/" class="brand">Varun Gohil</a>
+      <span class="nav">
+        <a href="/">Home</a><span class="sep">·</span>
+        <a href="/work/">Work</a><span class="sep">·</span>
+        <a href="/publications/">Publications</a><span class="sep">·</span>
+        <a href="/blog/" class="active">Blog</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>
+            <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+      </span>
+    </nav>
+    <div class="episode-list">
+
+    <a class="episode-row" href="/blog/powerexp/">
+      <div class="episode-meta">
+        <h4 class="episode-title">Surprising Power Dependence between CPU Sockets</h4>
+        <p class="episode-summary"><span class="episode-date">Apr 20, 2025</span> — Understanding the hidden impacts of uncore frequency scaling</p>
+      </div>
+    </a>
+
+    <a class="episode-row" href="/blog/timesync-cloudlab/">
+      <div class="episode-meta">
+        <h4 class="episode-title">Microsecond-Level Time Synchronization on CloudLab</h4>
+        <p class="episode-summary"><span class="episode-date">Mar 15, 2025</span> — for reliable jaeger tracing</p>
+      </div>
+    </a>
+
+    <a class="episode-row" href="/blog/quill-iitgn/">
+      <div class="episode-meta">
+        <h4 class="episode-title">Interview with Quill - IIT Gandhinagar</h4>
+        <p class="episode-summary"><span class="episode-date">Feb 1, 2025</span> — Answers FAQs about my undergraduate career.</p>
+      </div>
+    </a>
+
+    <a class="episode-row" href="/blog/mlsys-debuggability/">
+      <div class="episode-meta">
+        <h4 class="episode-title">Landscape of Debuggability in Machine Learning for Systems</h4>
+        <p class="episode-summary"><span class="episode-date">Jan 1, 2025</span> — Connecting diffused research on debuggability of ML-assisted systems into an intuitive framework.</p>
+      </div>
+    </a>
+
+    <a class="episode-row" href="/blog/nnlib/">
+      <div class="episode-meta">
+        <h4 class="episode-title">How to implement backprop easily?</h4>
+        <p class="episode-summary"><span class="episode-date">Dec 25, 2020</span> — An introduction to Automatic Differentiation</p>
+      </div>
+    </a>
+
+    </div>
+    <div class="footer">
+      <hr class="thin" />
+      <p style="margin-bottom: 0">Template from <a href="https://suvinay.github.io/">Suvinay Subramanian</a></p>
+    </div>
+  </div>
+  <script src="/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <title>
+    Varun Gohil
+  </title>
+
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="copyright" content="&copy; Copyright 2020 to Present"/>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Varun Gohil — Ph.D. student @ MIT CSAIL"/>
+  <meta name="keywords" content="machine learning for systems, computer systems, computer architecture, Varun Gohil">
+  <meta name="author" content="Varun Gohil">
+  <meta http-equiv="cleartype" content="on">
+
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Varun Gohil">
+  <meta property="og:title" content="Varun Gohil" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://varungohil.github.io/" />
+  <meta property="og:description" content="Varun's Website" />
+  <meta property="og:image" content="images/varun-cropped.JPG"/>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@VarunGohil9">
+  <meta name="twitter:creator" content="@VarunGohil9">
+  <meta name="twitter:title" content="Varun Gohil" />
+  <meta name="twitter:description" content="Varun's Website" />
+  <meta name="twitter:image" content="images/varun-cropped.JPG"/>
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .about-me p { text-align: justify; margin-bottom: 1rem; }
+  </style>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" href="favicons/favicon-32x32.png?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicons/favicon-16x16.png?v=2" sizes="16x16">
+  <link rel="icon" type="image/png" href="favicons/vg.png?v=2" sizes="512x512">
+  <link rel="shortcut icon" href="favicons/favicon.ico?v=2">
+  <link rel="manifest" href="favicons/manifest.json?v=2">
+  <link rel="mask-icon" href="favicons/vg.png?v=2" color="#990000">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="top-banner top-banner--home">
+          <span class="nav">
+            <a href="/" class="active">Home</a><span class="sep">·</span>
+            <a href="/work/">Work</a><span class="sep">·</span>
+            <a href="/publications/">Publications</a><span class="sep">·</span>
+            <a href="/blog/">Blog</a>
+          <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>
+            <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          </span>
+        </nav>
+
+        <div class="row opening-row">
+            <div class="seven columns tldr-column">
+                <h1 class="name">Varun Gohil</h1>
+                <p class="role">Ph.D. student @ <a href="https://www.csail.mit.edu/">MIT CSAIL</a></p>
+                <p class="email">Email: <a href="mailto:varuncg@mit.edu">varuncg@mit.edu</a></p>
+                <ul class="tldr">
+                  <li>👨‍💻 Building resilient ML-driven computer systems
+                  <li>🎓 EECS Ph.D., S.M. @ <a href="https://web.mit.edu/">MIT</a> |
+                      CSE B.Tech @ <a href="https://iitgn.ac.in/">IITGN</a>
+                  <li>📚 Maintains <a href="https://ml-for-systems.github.io/">ml-for-systems.github.io</a>
+                </ul>
+                <p class="contact">
+                  <a href="docs/cv.pdf">CV</a>
+                  &nbsp;&bull;&nbsp;
+                  <a href="https://scholar.google.com/citations?user=v_hC2_0AAAAJ&hl=en">Scholar</a>
+                  &nbsp;&bull;&nbsp;
+                  <a href="https://www.linkedin.com/in/varun-gohil">LinkedIn</a>
+                  &nbsp;&bull;&nbsp;
+                  <a href="https://twitter.com/VarunGohil9">X</a>
+                </p>
+            </div>
+            <div class="five columns">
+                <figure>
+                  <img src="images/varun-cropped.JPG" alt="Varun Gohil"/>
+                </figure>
+            </div>
+        </div>
+
+        <div class="intro">
+          <div class="section-head">
+            <h3>Research Interests</h3>
+            <a class="more" href="/work/">[More]</a>
+          </div>
+          <p>
+            I develop reusable mechanisms that enable safe and efficient integration of
+            machine learning into computer systems. My current focus is on making
+            ML-driven systems resilient with uncertainty estimation, and building agents
+            for computer system design and operation.
+          </p>
+        </div>
+
+        <div class="intro">
+          <div class="section-head">
+            <h3>News</h3>
+            <a class="more" href="/news/">[More]</a>
+          </div>
+          <ul class="news-list" style="margin-bottom: 0;">
+            <li>
+              <span class="news-date">Oct 2026</span>
+              <span class="news-text">
+                <a href="https://arxiv.org/abs/2610.02376">Coco</a>
+                selected for spotlight at
+                <a href="https://mlforsystems.org/">ML for Systems @ NeurIPS 2026</a>
+              </span>
+            </li>
+            <li>
+              <span class="news-date">Aug 2026</span>
+              <span class="news-text">
+                Presented work on agents for cloud performance debugging at the Jane St Research Symposium
+              </span>
+            </li>
+            <li>
+              <span class="news-date">Apr 2026</span>
+              <span class="news-text">
+                <a href="https://arxiv.org/abs/2510.22087">QuArch</a>
+                accepted to <a href="https://icml.cc/">ICML 2026</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+      <div class="footer">
+        <hr class="thin" />
+        <p style="margin-bottom: 0">Template from <a href="https://suvinay.github.io/">Suvinay Subramanian</a></p>
+      </div>
+
+    </div>
+  <script src="theme.js"></script>
+</body>
+</html>

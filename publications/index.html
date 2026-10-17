@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <title>Publications | Varun Gohil</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Varun Gohil">
+  <meta name="description" content="Publications — Varun Gohil"/>
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/styles.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/vg.png?v=2" sizes="512x512">
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png?v=2" sizes="16x16">
+  <link rel="shortcut icon" href="/favicons/favicon.ico?v=2">
+</head>
+
+<body>
+    <div class="container subpage">
+        <nav class="top-banner">
+          <a href="/" class="brand">Varun Gohil</a>
+          <span class="nav">
+            <a href="/">Home</a><span class="sep">·</span>
+            <a href="/work/">Work</a><span class="sep">·</span>
+            <a href="/publications/" class="active">Publications</a><span class="sep">·</span>
+            <a href="/blog/">Blog</a>
+          <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>
+            <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          </span>
+        </nav>
+
+        <ul class="pub-list">
+          <li>
+            <a class="pub-title" href="/pubs/mlsys26.pdf">When Machine Learning Isn’t Sure: Building Resilient ML-based Computer Systems by Embracing Uncertainty</a><br>
+            <span class="pub-me">Varun Gohil</span>, Nevena Stojkovic, Noman Bashir, Sundar Dev, Gaurang Upasani, David Lo, Parthasarathy Ranganathan, Christina Delimitrou<br>
+            <a href="https://mlsys.org/Conferences/2026">MLSys 2026</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-mlsys26">Bib</a>
+              <a href="/pubs/mlsys26.pdf" class="pub-btn">PDF</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-mlsys26">@inproceedings{gohilmlsys2026,
+  author = {Varun Gohil and Nevena Stojkovic and Noman Bashir and Sundar Dev and Gaurang Upasani and David Lo and Parthasarathy Ranganathan and Christina Delimitrou},
+  title = {When Machine Learning Isn't Sure: Building Resilient ML-based Computer Systems by Embracing Uncertainty},
+  booktitle = {Annual Conference on Machine Learning and Systems (MLSys)},
+  year = {2026}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="https://arxiv.org/abs/2510.22087">QuArch: A Benchmark for Evaluating LLM Reasoning in Computer Architecture</a><br>
+            Shvetank Prakash, Andrew Cheng, Arya Tschand, Mark Mazumder, <span class="pub-me">Varun Gohil</span>, Jeffrey Ma, Jason Yik, Zishen Wan, Jessica Quaye, Elisavet Lydia Alvanaki, Avinash Kumar, Chandrashis Mazumdar, Tuhin Khare, Alexander Ingare, Ikechukwu Uchendu, Radhika Ghosal, Abhishek Tyagi, Chenyu Wang, Andrea Mattia Garavagno, Sarah Gu, Alice Guo, Grace Hur, Luca Carloni, Tushar Krishna, Ankita Nayak, Amir Yazdanbakhsh, Vijay Janapa Reddi<br>
+            <a href="https://icml.cc/">ICML 2026</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-quarch">Bib</a>
+              <a href="https://arxiv.org/abs/2510.22087" class="pub-btn">PDF</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-quarch">@inproceedings{prakash2026quarch,
+  title = {QuArch: A Benchmark for Evaluating LLM Reasoning in Computer Architecture},
+  author = {Shvetank Prakash and Andrew Cheng and Arya Tschand and Mark Mazumder and Varun Gohil and Jeffrey Ma and Jason Yik and Zishen Wan and Jessica Quaye and Elisavet Lydia Alvanaki and Avinash Kumar and Chandrashis Mazumdar and Tuhin Khare and Alexander Ingare and Ikechukwu Uchendu and Radhika Ghosal and Abhishek Tyagi and Chenyu Wang and Andrea Mattia Garavagno and Sarah Gu and Alice Guo and Grace Hur and Luca Carloni and Tushar Krishna and Ankita Nayak and Amir Yazdanbakhsh and Vijay Janapa Reddi},
+  booktitle = {Forty-third International Conference on Machine Learning (ICML)},
+  year = {2026},
+  url = {https://arxiv.org/abs/2510.22087}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="https://arxiv.org/abs/2610.02376">Coco: An Agentic Copilot for the Hardware–Software Co-Design Lifecycle</a><br>
+            Samuel Kushnir, Kavya Sreedhar, Yeshwanth Reddy Pogula, Amir Yazdanbakhsh, Narges Shahidi, Ming Liu, <span class="pub-me">Varun Gohil</span>, Ravi Iyer, Christina Delimitrou, Parthasarathy Ranganathan, Suvinay Subramanian<br>
+            <a href="https://mlforsystems.org/">ML for Systems Workshop @ NeurIPS 2026</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-coco">Bib</a>
+              <a href="https://arxiv.org/abs/2610.02376" class="pub-btn">PDF</a>
+            </div>
+            <div class="pub-award"><img src="/images/medal.png" alt=""> Selected for Spotlight Presentation</div>
+            <pre class="pub-bibtex" id="bib-coco">@inproceedings{kushnir2026coco,
+  title = {Coco: An Agentic Copilot for the Hardware--Software Co-Design Lifecycle},
+  author = {Samuel Kushnir and Kavya Sreedhar and Yeshwanth Reddy Pogula and Amir Yazdanbakhsh and Narges Shahidi and Ming Liu and Varun Gohil and Ravi Iyer and Christina Delimitrou and Parthasarathy Ranganathan and Suvinay Subramanian},
+  booktitle = {Workshop on Machine Learning for Systems at the 40th Conference on Neural Information Processing Systems (ML for Systems at NeurIPS)},
+  year = {2026},
+  url = {https://arxiv.org/abs/2610.02376}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/arch2_predictor_hierarchy.pdf">The Case for Uncertainty-Governed Predictor Hierarchies in ML for Systems</a><br>
+            Christos Zarkos, Nevena Stojkovic, <span class="pub-me">Varun Gohil</span>, Christina Delimitrou<br>
+            <a href="https://harvard-edge.github.io/asplos-26-arch-2-workshop/">Architecture 2.0 Workshop @ ASPLOS 2026</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-arch2">Bib</a>
+              <a href="/pubs/arch2_predictor_hierarchy.pdf" class="pub-btn">PDF</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-arch2">@inproceedings{zarkos2026the,
+  title = {The Case for Uncertainty-Governed Predictor Hierarchies in ML for Systems},
+  author = {Christos Zarkos and Nevena Stojkovic and Varun Gohil and Christina Delimitrou},
+  booktitle = {Architecture 2.0 Workshop on AI for Computing Systems Design, held with ASPLOS},
+  year = {2026},
+  url = {https://openreview.net/forum?id=ISos6BoAz2}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="https://ieeexplore.ieee.org/document/10488711">The Importance of Generalizability in Machine Learning for Systems</a><br>
+            <span class="pub-me">Varun Gohil</span>, Sundar Dev, Gaurang Upasani, David Lo, Parthasarathy Ranganathan, Christina Delimitrou<br>
+            <a href="https://www.computer.org/csdl/journal/ca">IEEE Computer Architecture Letters</a>, 2024
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-cal">Bib</a>
+              <a href="https://ieeexplore.ieee.org/document/10488711" class="pub-btn">PDF</a>
+              <a href="/pubs/cal-2024-slides.pdf" class="pub-btn">Slides</a>
+            </div>
+            <div class="pub-award"><img src="/images/medal.png" alt=""> Selected as Best of Computer Architecture Letters (CAL) for 2024</div>
+            <pre class="pub-bibtex" id="bib-cal">@article{genmlforsys,
+  author = {Varun Gohil and Sundar Dev and Gaurang Upasani and David Lo and Parthasarathy Ranganathan and Christina Delimitrou},
+  journal = {IEEE Computer Architecture Letters},
+  title = {The Importance of Generalizability in Machine Learning for Systems},
+  year = {2024},
+  volume = {23},
+  number = {01},
+  pages = {95-98},
+  doi = {10.1109/LCA.2024.3384449}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="https://www.usenix.org/system/files/osdi24-lazarev_1.pdf">Sabre: Hardware-Accelerated Snapshot Compression for Serverless MicroVMs</a><br>
+            Nikita Lazarev, <span class="pub-me">Varun Gohil</span>, James Tsai, Andy Anderson, Bhushan Chitlur, Zhiru Zhang, Christina Delimitrou<br>
+            <a href="https://www.usenix.org/conference/osdi24">OSDI 2024</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-sabre">Bib</a>
+              <a href="https://www.usenix.org/system/files/osdi24-lazarev_1.pdf" class="pub-btn">PDF</a>
+              <a href="https://github.com/barabanshek/sabre" class="pub-btn">Code</a>
+              <a href="https://www.usenix.org/conference/osdi24/presentation/lazarev" class="pub-btn">Video</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-sabre">@inproceedings{sabre,
+  author = {Nikita Lazarev and Varun Gohil and James Tsai and Andy Anderson and Bhushan Chitlur and Zhiru Zhang and Christina Delimitrou},
+  title = {Sabre: Hardware-Accelerated Snapshot Compression for Serverless MicroVMs},
+  booktitle = {18th USENIX Symposium on Operating Systems Design and Implementation (OSDI)},
+  year = {2024},
+  url = {https://www.usenix.org/conference/osdi24/presentation/lazarev}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="https://dl.acm.org/doi/10.1145/3698038.3698542">The Sunk Carbon Fallacy: Rethinking Carbon Footprint Metrics for Effective Carbon-Aware Scheduling</a><br>
+            Noman Bashir, <span class="pub-me">Varun Gohil</span>, Anagha Belavadi Subramanya, Mohammad Shahrad, David Irwin, Elsa Olivetti, Christina Delimitrou<br>
+            <a href="https://acmsocc.org/2024/">SoCC 2024</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-socc">Bib</a>
+              <a href="https://dl.acm.org/doi/10.1145/3698038.3698542" class="pub-btn">PDF</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-socc">@inproceedings{bashir2024sunk,
+  author = {Noman Bashir and Varun Gohil and Anagha Belavadi Subramanya and Mohammad Shahrad and David Irwin and Elsa Olivetti and Christina Delimitrou},
+  title = {The Sunk Carbon Fallacy: Rethinking Carbon Footprint Metrics for Effective Carbon-Aware Scheduling},
+  booktitle = {Proceedings of the 2024 ACM Symposium on Cloud Computing (SoCC)},
+  year = {2024},
+  doi = {10.1145/3698038.3698542}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/bench2021.pdf">Performance optimization opportunities in the Android software stack</a><br>
+            <span class="pub-me">Varun Gohil</span>, Nisarg Ujjainkar, Joycee Mekie, Manu Awasthi<br>
+            <a href="https://www.sciencedirect.com/journal/benchcouncil-transactions-on-benchmarks-standards-and-evaluations">BenchCouncil Transactions on Benchmarks Standards (TBench)</a>, 2021
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-tbench">Bib</a>
+              <a href="/pubs/bench2021.pdf" class="pub-btn">PDF</a>
+              <a href="https://docs.google.com/presentation/d/1Fx5qtLvWA6mFfwiaLjjVaBmpGDYvsbWn/edit?usp=sharing&ouid=117704017701280861020&rtpof=true&sd=true" class="pub-btn">Slides</a>
+              <a href="https://youtu.be/rXfwBpVlTi0" class="pub-btn">Video</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-tbench">@inproceedings{GOHIL2021100003,
+  title = {Performance optimization opportunities in the Android software stack},
+  booktitle = {BenchCouncil Transactions on Benchmarks Standards (TBench)},
+  year = {2021},
+  author = {Varun Gohil and Nisarg Ujjainkar and Joycee Mekie and Manu Awasthi},
+  doi = {https://doi.org/10.1016/j.tbench.2021.100003}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/fixed-posit.pdf">Fixed-Posit: A Floating-Point Representation for Error-Resilient Applications</a><br>
+            <span class="pub-me">Varun Gohil</span>, Sumit Walia, Joycee Mekie, Manu Awasthi<br>
+            <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8920">IEEE Transactions on Circuits and Systems II (TCAS II)</a>, 2021
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-posit">Bib</a>
+              <a href="/pubs/fixed-posit.pdf" class="pub-btn">PDF</a>
+              <a href="https://github.com/COSys-Research/Fixed-Posit" class="pub-btn">Code</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-posit">@inproceedings{9399648,
+  author = {Varun Gohil and Sumit Walia and Joycee Mekie and Manu Awasthi},
+  booktitle = {IEEE Transactions on Circuits and Systems II: Express Briefs (TCAS II)},
+  title = {Fixed-Posit: A Floating-Point Representation for Error-Resilient Applications},
+  year = {2021},
+  doi = {10.1109/TCSII.2021.3072217}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/hotstorage20_paper_v.pdf">Prefetching in Hybrid Main Memory Systems</a><br>
+            Subisha V, <span class="pub-me">Varun Gohil</span>, Nisarg Ujjainkar, Manu Awasthi<br>
+            <a href="https://www.usenix.org/conference/hotstorage20">HotStorage 2020</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-hotstorage">Bib</a>
+              <a href="/pubs/hotstorage20_paper_v.pdf" class="pub-btn">PDF</a>
+              <a href="/pubs/hotstorage20-paper86-slides-gohil.pdf" class="pub-btn">Slides</a>
+              <a href="https://2459d6dc103cb5933875-c0245c5c937c5dedcca3f1764ecc9b2f.ssl.cf2.rackcdn.com/hotstorage20/hotstorage20-paper86-video-long-gohil.mp4" class="pub-btn">Video</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-hotstorage">@inproceedings{254296,
+  author = {Subisha V and Varun Gohil and Nisarg Ujjainkar and Manu Awasthi},
+  title = {Prefetching in Hybrid Main Memory Systems},
+  booktitle = {12th USENIX Workshop on Hot Topics in Storage and File Systems (HotStorage 20)},
+  year = {2020},
+  url = {https://www.usenix.org/conference/hotstorage20/presentation/v}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/article.pdf">[Re] One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers</a><br>
+            <span class="pub-me">Varun Gohil</span>, S Deepak Narayanan, Atishay Jain<br>
+            <a href="https://reproducibility-challenge.github.io/neurips2019/">NeurIPS Reproducibility Challenge 2019</a>,
+            <a href="https://rescience.github.io/">ReScience-C</a>, 2020
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-lottery">Bib</a>
+              <a href="/pubs/article.pdf" class="pub-btn">PDF</a>
+              <a href="https://github.com/varungohil/Generalizing-Lottery-Tickets" class="pub-btn">Code</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-lottery">@article{gohil2019one,
+  title = {[Re] One ticket to win them all: generalizing lottery ticket initializations across datasets and optimizers},
+  author = {Varun Gohil and S Deepak Narayanan and Atishay Jain},
+  journal = {NeurIPS Reproducibility Challenge 2019, ReScience-C},
+  year = {2020}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/cods_comad_2020.pdf">Effect of Feature Hashing on Fair Classification</a><br>
+            Ritik Dutta, <span class="pub-me">Varun Gohil</span>, Atishay Jain<br>
+            <a href="https://cods-comad.in/2020/">Young Researchers Symposium, CoDS-COMAD 2020</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-cods">Bib</a>
+              <a href="/pubs/cods_comad_2020.pdf" class="pub-btn">PDF</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-cods">@inproceedings{10.1145/3371158.3371230,
+  author = {Ritik Dutta and Varun Gohil and Atishay Jain},
+  title = {Effect of Feature Hashing on Fair Classification},
+  booktitle = {Young Researchers Symposium, Proceedings of the 7th ACM IKDD CoDS and 25th COMAD},
+  year = {2020},
+  doi = {10.1145/3371158.3371230}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/FAB.pdf">FAB: Framework for Analyzing Benchmarks</a><br>
+            <span class="pub-me">Varun Gohil</span>, Shreyas Singh, Manu Awasthi<br>
+            <a href="https://icpe2019.spec.org/">Companion of ICPE 2019</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-fab">Bib</a>
+              <a href="/pubs/FAB.pdf" class="pub-btn">PDF</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-fab">@inproceedings{Gohil:2019:FFA:3302541.3313102,
+  author = {Varun Gohil and Shreyas Singh and Manu Awasthi},
+  title = {FAB: Framework for Analyzing Benchmarks},
+  booktitle = {Companion of the 2019 ACM/SPEC International Conference on Performance Engineering (ICPE)},
+  year = {2019},
+  doi = {10.1145/3302541.3313102}
+}</pre>
+          </li>
+
+          <li>
+            <a class="pub-title" href="/pubs/META.pdf">META: Memory Exploration Tool for Android Devices</a><br>
+            Nisarg Parikh, <span class="pub-me">Varun Gohil</span>, Manu Awasthi<br>
+            <a href="https://sigmobile.org/mobicom/2018/">Poster Track, MobiCom 2018</a>
+            <div class="pub-links">
+              <a href="#" class="pub-btn" data-bib="bib-meta">Bib</a>
+              <a href="/pubs/META.pdf" class="pub-btn">PDF</a>
+              <a href="/pubs/META_Poster.pdf" class="pub-btn">Poster</a>
+            </div>
+            <pre class="pub-bibtex" id="bib-meta">@inproceedings{Parikh:2018:MME:3241539.3267737,
+  author = {Nisarg Parikh and Varun Gohil and Manu Awasthi},
+  title = {META: Memory Exploration Tool for Android Devices},
+  booktitle = {Poster Track, Proceedings of the 24th Annual International Conference on Mobile Computing and Networking (MobiCom)},
+  year = {2018},
+  doi = {10.1145/3241539.3267737}
+}</pre>
+          </li>
+        </ul>
+
+      <div class="footer">
+        <hr class="thin" />
+        <p style="margin-bottom: 0">Template from <a href="https://suvinay.github.io/">Suvinay Subramanian</a></p>
+      </div>
+
+    </div>
+
+<script>
+document.querySelectorAll('.pub-btn[data-bib]').forEach(function (btn) {
+  btn.setAttribute('aria-expanded', 'false');
+  btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    var el = document.getElementById(btn.getAttribute('data-bib'));
+    if (!el) return;
+    var opening = !el.classList.contains('open');
+    document.querySelectorAll('.pub-bibtex.open').forEach(function (openEl) {
+      if (openEl !== el) {
+        openEl.classList.remove('open');
+        var otherBtn = document.querySelector('.pub-btn[data-bib="' + openEl.id + '"]');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+    el.classList.toggle('open', opening);
+    btn.setAttribute('aria-expanded', opening ? 'true' : 'false');
+  });
+});
+</script>
+  <script src="/theme.js"></script>
+</body>
+</html>

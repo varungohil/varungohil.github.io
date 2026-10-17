@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <title>Surprising Power Dependence between CPU Sockets | Varun Gohil</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Varun Gohil">
+  <meta name="description" content="Understanding the hidden impacts of uncore frequency scaling"/>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .post-body { text-align: justify; }
+    .post-body img { max-width: 100%; height: auto; display: block; margin: 1rem auto; }
+    .post-body pre { overflow-x: auto; background: var(--pre-bg); padding: 1rem; }
+    .post-body code { font-size: 0.9em; }
+    .post-body .caption { text-align: center; font-size: 0.9em; color: var(--muted-3); margin-bottom: 1.5rem; }
+    .post-meta { color: var(--muted-3); margin-bottom: 2rem; }
+    .post-body iframe { max-width: 100%; }
+    .post-body .row { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0; justify-content: center; }
+    .post-body .row > div { flex: 1 1 280px; }
+  
+    .post-body ul { list-style: disc inside; padding-left: 0; margin-left: 0; }
+    .post-body ol { list-style: decimal inside; padding-left: 0; margin-left: 0; }
+    .post-body li { margin-bottom: 0.45rem; line-height: 1.45; }
+    .post-body ul ul { list-style: circle inside; margin: 0.35rem 0 0.35rem 1.2rem; }
+    .post-body li > p { display: inline; margin: 0; }
+  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicons/vg.png?v=2" sizes="512x512">
+  <link rel="shortcut icon" href="/favicons/favicon.ico?v=2">
+</head>
+<body>
+  <div class="container subpage">
+    <nav class="top-banner">
+      <a href="/" class="brand">Varun Gohil</a>
+      <span class="nav">
+        <a href="/">Home</a><span class="sep">·</span>
+        <a href="/work/">Work</a><span class="sep">·</span>
+        <a href="/publications/">Publications</a><span class="sep">·</span>
+        <a href="/blog/" class="active">Blog</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+            <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 14.5A8.5 8.5 0 1 1 9.5 3a7 7 0 0 0 11.5 11.5z"/></svg>
+            <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+      </span>
+    </nav>
+    <h2>Surprising Power Dependence between CPU Sockets</h2>
+    <p class="post-meta">2025-04-20</p>
+    <div class="post-body post-content">
+<p>While digging into Linux power management over the past few weeks, I stumbled upon an interesting phenomenon, on multi-socket machines, the core frequency of one socket affects the power consumption of other sockets, even when controlling for their frequency, utilization and workload!</p>
+<p>While some power interaction between sockets is expected due to heat transfer and thermal effects, what makes this discovery particularly interesting is the magnitude of power dependence between sockets and the surprising mechanism behind it. This blog post documents my investigation and explains how Intel's power management policy creates this hidden power relationship.</p>
+<h4><strong>Experimental Setup</strong></h4>
+<p>To study this phenomenon, I designed a minimal setup as shown in Figure 1. Using c220g5 (Intel Xeon Silver 4114) machines on CloudLab with 2 sockets, I created the following configuration:</p>
+<ul>
+<li><strong>Socket 1 (Active socket)</strong>: Running multiple busy loops (programs with infinite for loops) to control utilization. Each busy loop fully utilizes one core. The frequency of all cores on Socket 1 was fixed at 0.8 GHz, the lowest possible frequency on the machine.</li>
+<li><strong>Socket 0 (Passive socket)</strong>: Running an energy measurement script pinned to a single core, regularly polling the energy counter using the <code>powercap-info</code> command.</li>
+</ul>
+<p>By measuring energy consumption over short intervals, I could calculate power consumption by dividing energy by time.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+
+<img src="/blog/images/powerexp/setup.png" alt="" width="500">
+    </div>
+</div>
+<div class="caption">
+   Figure 1: Experimental Setup using c220g5 nodes on CloudLab
+</div>
+
+<h4><strong>The Mysterious Socket Power Dependence</strong></h4>
+<p>For my experiment, I varied the frequency of Socket 0 while measuring power consumed by both sockets. Since Socket 1's core frequency was fixed throughout the experiment, I expected that changing Socket 0's frequency would have little to no impact on Socket 1's power consumption. However, my results showed something completely different!</p>
+<p>Figure 2 shows the power consumed by both sockets when Socket 1 is at 40% utilization as I vary Socket 0's frequency. When I increased Socket 0's frequency from 0.8 GHz to 2.0 GHz, Socket 1's power consumption remained stable as expected. However, when I increased Socket 0 to 2.2 GHz, Socket 1's power consumption suddenly jumped (brown line)!</p>
+<p>This pattern appeared consistently across different utilization levels and even when swapping which socket was active. Two aspects of this result were particularly surprising:</p>
+<ul>
+<li>The power dependency was triggered only when Socket 0 ran at 2.2 GHz (the highest frequency of the machine)</li>
+<li>The difference in Socket 1's power consumption between 2.0 GHz and 2.2 GHz settings was approximately 5W — a significant amount when Socket 1's power consumption is around 30W.</li>
+</ul>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+<img src="/blog/images/powerexp/uncorevary.png" alt="">
+    </div>
+</div>
+<div class="caption">
+   Figure 2: Power consumption of both sockets when varying Socket 0's frequency while Socket 1 runs at 40% utilization
+</div>
+
+<h4><strong>The Culprit: Uncore frequency</strong></h4>
+<p>To identify the cause of this socket power dependence, I collected various microarchitectural metrics. One metric stood out with a perfect correlation to the observed power behavior: uncore frequency.</p>
+<p>The &quot;uncore&quot; refers to components of the CPU that are not part of the cores themselves—including memory controllers, last-level cache, and interconnects between cores. These components have their own clock frequencies that can be adjusted separately from core frequencies.</p>
+<p>Figure 3 shows the uncore frequency when varying Socket 0's core frequency. The uncore frequency remained at its minimum value (1.2 GHz) when Socket 0's core frequency was between 0.8 GHz and 2.0 GHz. However, when the core frequency reached 2.2 GHz, the uncore frequency suddenly jumped to its maximum value of 2.0 GHz.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+<img src="/blog/images/powerexp/uncore.png" alt="" width="500">
+    </div>
+</div>
+<div class="caption">
+   Figure 3: Uncore frequency behavior when varying Socket 0's core frequency
+</div>
+
+<p>To verify that uncore frequency was indeed responsible for the power dependency, I conducted another experiment where I fixed the uncore frequency at 1.2 GHz while varying Socket 0's core frequency. Figure 4 shows the results—Socket 1's power consumption no longer depended on Socket 0's core frequency when the uncore frequency was fixed.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+<img src="/blog/images/powerexp/uncorefix.png" alt="">
+    </div>
+</div>
+<div class="caption">
+   Figure 4: Power consumption of both sockets when varying Socket 0's frequency with uncore frequency fixed at 1.2 GHz
+</div>
+
+<p><strong>Why does this happen?</strong></p>
+<p>This behavior is explained by Intel's Uncore Frequency Scaling policy. According to research by <a href="https://yananguo.com/files/micro23.pdf">Guo et al.</a>:</p>
+<blockquote>
+<p>Uncore frequency is dynamically adjusted only when all the active cores are running at a frequency lower than the base frequency. When at least one core is running at a higher frequency, the uncore consistently stays at the maximum frequency”</p>
+</blockquote>
+<p>For my test machine, the base frequency is 2.2 GHz. Therefore, when I set Socket 0's core frequency to 2.2 GHz, the uncore frequency automatically increased to its maximum value, causing increased power consumption on the adjacent socket as well.</p>
+<p><strong>What's the rationale behind this design?</strong></p>
+<p>While this explains the mechanism behind the socket power dependency, it raises the question of why Intel designed their uncore frequency scaling this way.</p>
+<p>The best explanation comes from a paper by <a href="https://lca.ece.utexas.edu/pubs/BircherICS2008.pdf">Bircher et al.</a>, which suggests that when a core runs at high frequency, it can be stalled by delays in cache snooping requests if the uncore frequency is too low. Running the uncore at maximum frequency when any core reaches maximum frequency helps prevent these bottlenecks.</p>
+<p>However, this optimization only makes sense for memory-intensive applications. In my experiment with CPU-bound busy loops requiring minimal memory access, this behavior seems unnecessary yet still impacts system-wide power consumption.</p>
+<p>If you have alternative explanations for this behavior or have observed similar phenomena, I'd love to hear from you!</p>
+<h4><strong>Key Takeaways</strong></h4>
+<p>This investigation has revealed a significant and often overlooked power dependency in multi-socket systems, where the core frequency of one socket can unexpectedly impact the power consumption of adjacent sockets due to scaling of uncore frequency.</p>
+<p>This finding has important implications for power management in multi-socket systems:</p>
+<ul>
+<li>Power Modeling: Accurate power models must consider the cross-socket effects of uncore frequency scaling to provide reliable power estimates for diverse workloads.</li>
+<li>Workload Placement: Careful consideration should be given to the placement of high-frequency workloads. Running applications that heavily utilize the maximum core frequency on one socket could inadvertently increase the power draw of other sockets, potentially impacting overall system efficiency and thermal management.</li>
+</ul>
+
+    </div>
+    <p><a href="/blog/">&larr; Back to Blog</a></p>
+    <div class="footer">
+      <hr class="thin" />
+      <p style="margin-bottom: 0">Template from <a href="https://suvinay.github.io/">Suvinay Subramanian</a></p>
+    </div>
+  </div>
+  <script src="/blog/toc.js"></script>
+  <script src="/blog/copy-code.js"></script>
+  <script src="/theme.js"></script>
+</body>
+</html>
